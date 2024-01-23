@@ -1,6 +1,7 @@
 import React from 'react'
-import Circle from '../svgs/circle'
+import Circle from './svgs/circle'
 import Link from 'next/link'
+import Feedback from './actions/feedback'
 
 export default function Footer() {
   return (
@@ -20,17 +21,17 @@ export default function Footer() {
             </div>
             <div className='w-1/3 '>
                 <div className='text-footer-light-text mt-6 text-xl'>Pages</div>
-                <div className='text-footer-light-text2 mt-4 text-base font-thin'>
+                <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition delay-200 ease-in-out'>
                   <Link href={'/'} >
                         Home Page
                   </Link>
                 </div>
-                <div className='text-footer-light-text2 mt-4 text-base font-thin'>
+                <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition delay-200 ease-in-out'>
                   <Link href={'/about'} >
                         About Page
                   </Link>
                 </div>
-                <div className='text-footer-light-text2 mt-4 text-base font-thin'>
+                <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition delay-200 ease-in-out'>
                   <Link href={'/works'} >
                         Works Page
                   </Link>
@@ -38,17 +39,17 @@ export default function Footer() {
             </div>
             <div className='w-1/3 '>
                 <div className='text-footer-light-text mt-6 text-xl'>Other Sites</div>
-                <div className='text-footer-light-text2 mt-4 text-base font-thin'>
+                <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition delay-200 ease-in-out'>
                   <Link href={'/'} >
                         Twitter
                   </Link>
                 </div>
-                <div className='text-footer-light-text2 mt-4 text-base font-thin'>
+                <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition delay-200 ease-in-out'>
                   <Link href={'/about'} >
                         Instagram
                   </Link>
                 </div>
-                <div className='text-footer-light-text2 mt-4 text-base font-thin'>
+                <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition delay-200 ease-in-out'>
                   <Link href={'/works'} >
                         LinkedIn
                   </Link>
@@ -59,6 +60,7 @@ export default function Footer() {
         <div className='w-1/2'>
             <div className='text-footer-light-text font-semibold mt-6 text-xl'>How You Can Contact me!</div>
             <div className='text-gray-50 mt-4 text-base font-thin'>Contact me just by send notification</div>
+            <Feedback/>
         </div>
     </div>
   )

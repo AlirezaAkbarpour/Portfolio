@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Banner_cube from './svgs/banner-cube'
+import Banner_cube from './components/svgs/banner-cube'
 import Works_banner from './components/works-banner'
 import Blog_banner from './components/blog-banner'
 

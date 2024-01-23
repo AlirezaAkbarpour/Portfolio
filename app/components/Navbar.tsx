@@ -1,6 +1,6 @@
 'use client';
-import Circle from "../svgs/circle";
-import ContactBtn from "./ContactBtn";
+import Circle from "./svgs/circle";
+import ContactBtn from "./actions/ContactBtn";
 import NavbarItem from "./NavbarItem";
 
 export default function Navbar() {
