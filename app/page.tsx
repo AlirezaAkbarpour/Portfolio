@@ -2,10 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Banner_cube from './svgs/banner-cube'
 import Works_banner from './components/works-banner'
+import Blog_banner from './components/blog-banner'
 
 export default function Home() {
   return (
-      <div className='w-full mx-2 h-auto min-h-[720px] bg-background-theme'>
+      <div className='w-full h-auto min-h-[720px] bg-background-theme'>
         <div className="w-full h-[640px] mt-12 flex flex-col md:flex-row justify-between">
           <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
             <div className="titleOne w-full text-6xl text-icon-blue font-bold mx-4 p-2">Hy ! I Am</div>
@@ -59,7 +60,12 @@ export default function Home() {
                 <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>
           </div>
         </div>
-        <Works_banner/>
+        <div className="w-full flex justify-center">
+                <Works_banner/> 
+        </div>
+        <div className='w-full flex justify-center'>
+                <Blog_banner/>
+        </div>
       </div>
   )
 }

@@ -1,13 +1,13 @@
 'use client';
-import Inet from "../svgs/inet";
 import Circle from "../svgs/circle";
 import ContactBtn from "./ContactBtn";
-import Link from "next/link";
 import NavbarItem from "./NavbarItem";
 
 export default function Navbar() {
   return (
-    <nav className="w-full max-w-full h-16 flex mx-2 justify-between align-middle fixed top-0 left-0 z-10 bg-background-theme">
+    <nav className="w-full max-w-full h-16 flex justify-between 
+    align-middle fixed top-0 left-0 z-10 bg-background-theme
+    ">
           <div id="icon" className="w-64 h-16 p-2 mt-2 flex align-middle text-icon-blue 
           font-black text-3xl
           font-archivo
