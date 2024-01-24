@@ -1,11 +1,30 @@
-import React from 'react'
+'use client'
+import React ,{useRef} from 'react'
 import Circle from './svgs/circle'
 import Link from 'next/link'
 import Feedback from './actions/feedback'
+import { useGSAP } from '@gsap/react'
+import {gsap,ScrollTrigger} from 'gsap/all'
 
 export default function Footer() {
+
+  const container = useRef<HTMLInputElement>(null)
+  gsap.registerPlugin(ScrollTrigger)
+  let scrollTl = gsap.timeline({
+        scrollTrigger:{
+          trigger: ".footer",
+          start:"20% 90%",
+          end:"bottom 70%",
+          toggleActions:"play pause resume reverse"
+        },
+      })
+  useGSAP(()=>{
+    scrollTl.from('.footer',{opacity:0,duration:1,y:20,ease:'power3.inOut'})
+  },)
+
   return (
-    <div className='w-full h-[220px] bg-footer-color-black mt-8 rounded-t-3xl flex'>
+    <div ref={container}>
+    <div className='footer w-full h-[220px] bg-footer-color-black mt-8 rounded-t-3xl flex'>
         <div className='w-1/2 flex justify-start'>
             <div className='w-1/3'>
                 <div id="icon" className="w-64 h-16 p-2 mt-2 flex align-middle text-white 
@@ -62,6 +81,7 @@ export default function Footer() {
             <div className='text-gray-50 mt-4 text-base font-thin'>Contact me just by send notification</div>
             <Feedback/>
         </div>
+    </div>
     </div>
   )
 }

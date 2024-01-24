@@ -3,6 +3,7 @@ import { Archivo } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/footer'
+import Loading from './components/loading'
 
 const archivo = Archivo({ subsets: ['latin'] })
 
@@ -22,7 +23,7 @@ export default function RootLayout({
         <Navbar/>
         <div className="container min-w-full ">
           <div className='w-full min-h-full flex justify-center'>
-            {children} 
+            {children?children:<Loading/>} 
           </div>    
         </div>
         <Footer/>
