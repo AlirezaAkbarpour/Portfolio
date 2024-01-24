@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Banner_cube from './components/svgs/banner-cube'
-import Works_banner from './components/works-banner'
-import Blog_banner from './components/blog-banner'
+import Banner_cube from '../components/svgs/banner-cube'
+import Works_banner from '../components/works-banner'
+import Blog_banner from '../components/blog-banner'
 
 export default function Home() {
   return (

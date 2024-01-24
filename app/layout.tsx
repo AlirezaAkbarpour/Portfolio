@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Archivo } from 'next/font/google'
 import './globals.css'
-import Navbar from './components/Navbar'
-import Footer from './components/footer'
-import Loading from './components/loading'
+import Navbar from '../components/Navbar'
+import Footer from '../components/footer'
+import Loading from '../components/loading'
 
 const archivo = Archivo({ subsets: ['latin'] })
 
