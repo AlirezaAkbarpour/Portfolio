@@ -19,7 +19,7 @@ export default function Footer() {
         },
       })
   useGSAP(()=>{
-    scrollTl.from('.footer',{opacity:0,duration:1,y:20,ease:'power3.inOut'})
+    scrollTl.from('.footer',{opacity:0,duration:1.5,y:20,ease:'power3.inOut'})
   },)
 
   return (

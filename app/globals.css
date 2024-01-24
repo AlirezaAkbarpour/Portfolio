@@ -21,3 +21,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+body{
+     scrollbar-width: none;
+     scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
