@@ -39,22 +39,22 @@ export default function Home() {
                 </div>
           </div>
           <div className='w-1/4'>
-                <div className='py-3'>
-                  <Image src={'/images/source-code.png'} alt='code' width={64} height={68}/>
+                <div className='py-2'>
+                  <Image src={'/images/source-code.png'} className='w-16 h-16' alt='code' width={64} height={68}/>
                 </div>
                 <div className='font-light text-base text-zinc-600 my-1'>Front End Developer</div>
                 <div className='w-56 font-light text-sm'>We provide structured graphical user interface</div>
           </div>
           <div className='w-1/4'>
                 <div className="py-2">
-                  <Image src={'/images/light-icon.png'} alt='light' width={64} height={64}/>
+                  <Image src={'/images/light-icon.png'} className='w-16 h-16' alt='light' width={64} height={64}/>
                 </div>
                 <div className='font-light text-zinc-600 my-1 text-base'>UI/UX Designer</div>
                 <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>
           </div>
           <div className='w-1/4'>
           <div className="py-2">
-                  <Image src={'/images/webcam-icon.png'} alt='light' width={64} height={68}/>
+                  <Image src={'/images/webcam-icon.png'} className='w-16 h-16' alt='light' width={64} height={68}/>
                 </div>
                 <div className='font-light text-zinc-600 my-1 text-base'>UI/UX Designer</div>
                 <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>

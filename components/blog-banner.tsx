@@ -10,7 +10,11 @@ export default function Blog_banner() {
         router.push(path)
     }
   return (
-        <div className='w-[70%] h-64 mx-4 bg-white mt-4 mb-4 flex justify-center py-2 px-4 rounded-3xl shadow-lg hover:cursor-pointer' onClick={()=> handleClick('/blogs')}>
+        <div className='w-[70%] h-64 mx-4 bg-white mt-4 
+        mb-4 flex justify-center py-2 px-4 rounded-3xl 
+        shadow-lg hover:cursor-pointer
+        hover:animate-pulse
+        ' onClick={()=> handleClick('/blogs')}>
             <div className='w-[520px] flex flex-col mt-8'>
                 <div className='text-7xl w-full flex justify-start p-1 font-semibold'>Explore to</div>
                 <div className='text-7xl w-full 
