@@ -19,6 +19,7 @@ export default function Home() {
         trigger:'.item-box',
         start: 'top 80%',
         end:'bottom bottom',
+        toggleActions:"play none none reverse"
       }
     })
     useGSAP(()=>{
@@ -73,8 +74,8 @@ export default function Home() {
   
             </div>
           </div>
-          <div className='w-full h-48 flex justify-between bg-white p-2'>
-            <div className='cube w-1/4'> 
+          <div className='cube w-full h-48 flex justify-between bg-white p-2'>
+            <div className=' w-1/4'> 
                   <div>
                     <Banner_cube/>
                   </div>

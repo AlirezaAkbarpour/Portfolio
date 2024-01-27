@@ -8,8 +8,8 @@ import {gsap,ScrollTrigger} from 'gsap/all'
 
 export default function Footer() {
 
-  let container = useRef(null)
-  let footer= useRef(null)
+  const container : React.RefObject<HTMLDivElement> = useRef(null)
+  const footer : React.RefObject<HTMLDivElement> = useRef(null)
   gsap.registerPlugin(ScrollTrigger)
   let scrollTl = gsap.timeline({
         scrollTrigger:{
@@ -20,7 +20,7 @@ export default function Footer() {
         },
       })
   useGSAP(()=>{
-    scrollTl.from('.footer',{opacity:0,duration:1.5,y:5,ease:'power3.inOut'})
+    scrollTl.from('.footer',{opacity:0,duration:1,y:10,ease:'power3.inOut'})
   },{scope:container})
 
   return (
