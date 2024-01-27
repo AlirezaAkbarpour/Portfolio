@@ -21,12 +21,12 @@ export default function RootLayout({
     <html lang="en" className={archivo.className}>
       <body className='w-full bg-background-base'>
         <Navbar/>
-        <div className="container min-w-full ">
+        <div className="container min-w-full ">   
           <div className='w-full min-h-full flex justify-center'>
             {children?children:<Loading/>} 
-          </div>    
+          </div>
         </div>
-        <Footer/>
+        <Footer/>    
       </body>
     </html>
   )
