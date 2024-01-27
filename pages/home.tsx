@@ -17,7 +17,7 @@ export default function Home() {
     const scrollTl = gsap.timeline({
       scrollTrigger:{
         trigger:'.item-box',
-        start: 'top center',
+        start: 'top 80%',
         end:'bottom bottom',
       }
     })
@@ -40,6 +40,7 @@ export default function Home() {
         scrollTl.from('.cube',{opacity:0,})
         scrollTl.from('.item-box',{opacity:0,stagger:{each:0.5}})
     },{scope:container})
+
     return (
         <div className='w-full h-auto min-h-[720px] bg-background-theme' ref={container}>
           <div className="w-full h-[640px] mt-12 flex flex-col md:flex-row justify-between">
@@ -80,21 +81,21 @@ export default function Home() {
             </div>
             <div className='item-box w-1/4'>
                   <div className=' py-2'>
-                    <Image src={'/images/source-code.png'} className='w-16 h-14 m-1' alt='code' width={64} height={68}/>
+                    <Image src={'/images/source-code.png'} className='w-16 h-14 mb-1 mr-2' alt='code' width={64} height={68}/>
                   </div>
                   <div className='font-light text-base text-zinc-600 my-1'>Front End Developer</div>
                   <div className='w-56 font-light text-sm'>We provide structured graphical user interface</div>
             </div>
             <div className='item-box w-1/4'>
                   <div className=" py-2">
-                    <Image src={'/images/light-icon.png'} className='m-1 w-16 h-14' alt='light' width={64} height={64}/>
+                    <Image src={'/images/light-icon.png'} className='mb-1 w-16 h-14 mr-1' alt='light' width={64} height={64}/>
                   </div>
                   <div className='font-light text-zinc-600 my-1 text-base'>UI/UX Designer</div>
                   <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>
             </div>
             <div className='item-box w-1/4'>
             <div className=" py-2">
-                    <Image src={'/images/webcam-icon.png'} className='w-16 h-14 m-1' alt='light' width={64} height={68}/>
+                    <Image src={'/images/webcam-icon.png'} className='w-16 h-14 mb-1 mr-1' alt='light' width={64} height={68}/>
                   </div>
                   <div className='font-light text-zinc-600 my-1 text-base'>UI/UX Designer</div>
                   <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>
