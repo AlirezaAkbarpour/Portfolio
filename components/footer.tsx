@@ -4,7 +4,8 @@ import Circle from './svgs/circle'
 import Link from 'next/link'
 import Feedback from './actions/feedback'
 import { useGSAP } from '@gsap/react'
-import {gsap,ScrollTrigger} from 'gsap/all'
+import {gsap} from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 
 export default function Footer() {
 

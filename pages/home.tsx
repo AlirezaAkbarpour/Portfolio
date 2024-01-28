@@ -4,13 +4,14 @@ import Link from 'next/link'
 import Banner_cube from '../components/svgs/banner-cube'
 import Works_banner from '../components/works-banner'
 import Blog_banner from '../components/blog-banner'
-import { gsap } from 'gsap/gsap-core'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 
-
 export default function Home() {
-
+    //gsap config
+    gsap.registerPlugin(ScrollTrigger)
     const timeLine = gsap.timeline()
     const container: React.RefObject<HTMLDivElement> = useRef(null)
     const timeLine2 = gsap.timeline()

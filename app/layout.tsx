@@ -4,7 +4,7 @@ import './globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import Loading from '../components/loading'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 
 const archivo = Archivo({ subsets: ['latin'] })
 
@@ -19,6 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en" className={archivo.className}>
       <body className='w-full h-screen bg-background-base'>
