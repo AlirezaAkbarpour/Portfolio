@@ -16,7 +16,7 @@ export default function Footer() {
         scrollTrigger:{
           trigger: '.footer',
           start:"20% 90%",
-          end:"bottom 70%",
+          end:"bottom center",
           toggleActions:"play pause resume reverse",
         },
       })

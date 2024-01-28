@@ -7,20 +7,22 @@ import Blog_banner from '../components/blog-banner'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 
 export default function Home() {
+    //refs
+    const itemBoxRef : React.RefObject<HTMLDivElement> = useRef(null)
+    const container: React.RefObject<HTMLDivElement> = useRef(null)
     //gsap config
     gsap.registerPlugin(ScrollTrigger)
     const timeLine = gsap.timeline()
-    const container: React.RefObject<HTMLDivElement> = useRef(null)
     const timeLine2 = gsap.timeline()
     const scrollTl = gsap.timeline({
       scrollTrigger:{
-        trigger:'.item-box',
+        trigger: itemBoxRef.current,
         start: 'top 80%',
         end:'bottom bottom',
-        toggleActions:"play none none reverse"
+        toggleActions:"play none none reverse",
       }
     })
     useGSAP(()=>{
@@ -39,8 +41,7 @@ export default function Home() {
     },{scope:container})
 
     useGSAP(()=>{
-        scrollTl.from('.cube',{opacity:0,})
-        scrollTl.from('.item-box',{opacity:0,stagger:{each:0.5}})
+        scrollTl.from(itemBoxRef.current,{opacity:0,stagger:{each:0.5}})
     },{scope:container})
 
     return (
@@ -75,27 +76,27 @@ export default function Home() {
   
             </div>
           </div>
-          <div className='cube w-full h-48 flex justify-between bg-white p-2'>
+          <div className='w-full h-48 flex justify-between bg-white p-2' ref={itemBoxRef}>
             <div className=' w-1/4'> 
                   <div>
                     <Banner_cube/>
                   </div>
             </div>
-            <div className='item-box w-1/4'>
+            <div className='w-1/4' ref={itemBoxRef}>
                   <div className=' py-2'>
                     <Image src={'/images/source-code.png'} className='w-16 h-14 mb-1 mr-2' alt='code' width={64} height={68}/>
                   </div>
                   <div className='font-light text-base text-zinc-600 my-1'>Front End Developer</div>
                   <div className='w-56 font-light text-sm'>We provide structured graphical user interface</div>
             </div>
-            <div className='item-box w-1/4'>
+            <div className='w-1/4' ref={itemBoxRef}>
                   <div className=" py-2">
                     <Image src={'/images/light-icon.png'} className='mb-1 w-16 h-14 mr-1' alt='light' width={64} height={64}/>
                   </div>
                   <div className='font-light text-zinc-600 my-1 text-base'>UI/UX Designer</div>
                   <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>
             </div>
-            <div className='item-box w-1/4'>
+            <div className='w-1/4' ref={itemBoxRef}>
             <div className=" py-2">
                     <Image src={'/images/webcam-icon.png'} className='w-16 h-14 mb-1 mr-1' alt='light' width={64} height={68}/>
                   </div>
