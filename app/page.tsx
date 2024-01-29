@@ -3,7 +3,7 @@ import Loading from '@/components/loading'
 import dynamic from 'next/dynamic'
 
 
-const DynamicHome = dynamic(()=> import('../pages/home'),{
+const DynamicHome = dynamic(()=> import('@/pages/home'),{
   loading: ()=>{
     return <Loading />
   }
