@@ -3,7 +3,6 @@ import React, { Suspense, useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import Loading from '@/components/loading';
 
 export default function WorksPage() {
 
@@ -24,7 +23,7 @@ export default function WorksPage() {
                 <div className='mt-10'>   
                     <p className='textRef w-full text-7xl font-bold m-2 text-footer-color-black' >It{"'"}s</p>
                     <p className='textRef w-full text-7xl font-bold m-2 text-footer-color-black'>My Works!</p>
-                    <p className='textRef w-full text-2xl font-light p-2 mt-2 text-zinc-600'>Some Projects that you can look!</p>
+                    <p className='textRef w-full text-2xl font-light p-2 mt-2 ml-1 text-zinc-600'>Some Projects that you can look!</p>
                 </div>   
                 <div className='image mx-16'>
                     <Image src="/images/look-up-banner.png"  width={560} height={560} className='w-[560px] h-[360px]' alt='image'/>

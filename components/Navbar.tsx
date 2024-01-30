@@ -12,7 +12,6 @@ export default function Navbar() {
     ">
           <div id="icon" className="w-64 h-16 p-2 mt-2 flex align-middle text-icon-blue 
           font-black text-3xl
-          font-archivo
           mr-2
           hover:animate-pulse
           "> 

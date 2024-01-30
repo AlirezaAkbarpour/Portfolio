@@ -4,13 +4,14 @@ import './globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import Loading from '../components/loading'
-import { Suspense, useState } from 'react'
+import { Suspense } from 'react'
 
 const archivo = Archivo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Aka',
   description: 'Alireza Akbarpour',
+  
 }
 
 

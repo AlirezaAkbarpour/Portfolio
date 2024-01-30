@@ -2,10 +2,9 @@
 import Blog_banner from "@/components/blog-banner"
 import Works_banner from "@/components/works-banner"
 import Image from "next/image"
-import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { RefObject, useRef } from "react"
-
+import { gsap } from "gsap";
 export default function NotFound() {
 
   const timeline = gsap.timeline();
