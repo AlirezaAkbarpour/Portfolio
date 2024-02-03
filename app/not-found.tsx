@@ -5,13 +5,11 @@ import Image from "next/image"
 import { useGSAP } from "@gsap/react"
 import { RefObject, useRef } from "react"
 import { gsap } from "gsap";
+
 export default function NotFound() {
-
-  const timeline = gsap.timeline();
   const container : RefObject<HTMLDivElement> = useRef(null)
-
   useGSAP(()=>{
-      gsap.from('.text',{opacity:0,y:20,duration:0.5,ease:'elastic.inOut'})
+      gsap.from('.text',{opacity:0,y:10,duration:0.5,ease:'elastic.inOut'})
       gsap.from('.image',{opacity:0,rotate:'360deg',ease:'expo.inOut',duration:.5})
   },{scope:container})
 

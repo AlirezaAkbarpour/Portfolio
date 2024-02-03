@@ -23,16 +23,16 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={archivo.className}>
-      <body className='w-full h-screen bg-background-base'>
+      <body className='w-full min-h-screen bg-background-base'>
         <Navbar/>
         <div className="container min-w-full ">   
           <div className='w-full min-h-full flex justify-center'>
             <Suspense fallback={<Loading/>}>
-              {children} 
+              {children}  
             </Suspense>
           </div>
         </div>
-        <Footer/>    
+        <Footer/>
       </body>
     </html>
   )
