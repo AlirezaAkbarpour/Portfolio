@@ -33,6 +33,7 @@ export default function RootLayout({
           </div>
         </div>
         <Footer/>
+        <div id='not'></div>
       </body>
     </html>
   )
