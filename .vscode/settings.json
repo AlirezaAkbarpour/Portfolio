@@ -5,6 +5,7 @@
         "archivo",
         "gsap",
         "Notife",
+        "Onclicked",
         "svgs"
     ]
 }
