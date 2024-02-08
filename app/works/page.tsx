@@ -18,7 +18,7 @@ export default function WorksPage() {
 
   return (
     <div className='w-full h-screen bg-background-theme' ref={container_ref}>
-        <div className="w-full mt-40 mx-12">
+        <div className="w-full mt-40 mx-auto">
             <div className='flex justify-around'>
                 <div className='mt-16'>   
                     <p className='textRef w-full text-7xl font-bold m-2 text-footer-color-black' >It{"'"}s</p>

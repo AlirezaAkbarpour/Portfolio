@@ -1,32 +1,19 @@
 'use client'
-import React ,{useRef} from 'react'
+import React ,{Suspense, useRef} from 'react'
 import Circle from './svgs/circle'
 import Link from 'next/link'
 import Feedback from './actions/feedback'
 import { useGSAP } from '@gsap/react'
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import Loading from './loading'
+
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Footer() {
 
-  const container : React.RefObject<HTMLDivElement> = useRef(null)
- 
-  useGSAP(()=>{ 
-    let scrollTl = gsap.timeline({
-        scrollTrigger:{
-          trigger: '.footer',
-          start:"top 90%",
-          end:"bottom bottom",
-          //markers:true,
-          toggleActions:"play pause resume reverse",
-        },
-      })
-    scrollTl.from('.footer',{opacity:0,duration:1,y:10,ease:'power3.inOut'})
-  },{scope:container})
-
     return (
-      <div ref={container}>
+      <div >
       <div className='footer w-full top-full h-[220px] bg-footer-color-black mt-8 rounded-t-3xl flex'>
       <div className='w-1/2 flex justify-start'>
           <div className='w-1/3'>
@@ -86,6 +73,5 @@ export default function Footer() {
       </div>
   </div>
   </div>
-
       )
 }

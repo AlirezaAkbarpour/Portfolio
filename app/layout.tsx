@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={archivo.className}>
-      <body className='w-full min-h-screen bg-background-base'>
+      <body className='max-w-screen-2xl min-h-screen bg-background-base'>
         <Navbar/>
         <div className="container min-w-full ">   
           <div className='w-full min-h-full flex justify-center'>

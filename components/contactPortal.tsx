@@ -40,7 +40,7 @@ export default function ContactPortal({isOpen,OnClose}:Props){
                 <div className='w-full h-16 flex justify-between p-4'>
                         <h1 className='text-4xl font-archivo font-semibold text-footer-color-black'>Contact Me</h1>
                         <button onClick={closeHandler}>
-                        <CancelIcon className='w-16 h-16 cursor-pointer text-orange-600 mt-1 hover:opacity-50' fontSize='large' 
+                        <CancelIcon className='w-16 h-16 cursor-pointer text-red-700 mt-1 hover:opacity-50' fontSize='large' 
                         />
                         </button>
                       
@@ -48,19 +48,25 @@ export default function ContactPortal({isOpen,OnClose}:Props){
                 <Divider color='grey' variant='middle'/>
                 <div className='flex justify-center'>
 
-                <div className="flex justify-center w-1/3 p-4 mt-8 hover:border-2 hover:border-purple-900 hover:scale-105 rounded-lg delay-75">
+                <div className="flex justify-center w-1/3 p-4 mt-8 
+                hover:border-2 hover:border-purple-900 hover:scale-105 
+                rounded-lg delay-75 transition-all ease-in-out">
                     <Link href={'/'} >
                         <InstagramIcon sx={{fontSize:"108px"}} className='text-orange-600 ml-2 text-center'/>
                         <h1 className='text-center font-semibold text-footer-color-black text-2xl p-2 mt-8'>Instagram</h1>
                     </Link>
                 </div>
-                <div className="flex justify-center w-1/3 p-4 mt-8 hover:border-2 hover:border-purple-900 hover:scale-105 rounded-lg delay-75">
+                <div className="flex justify-center w-1/3 p-4 mt-8 
+                hover:border-2 hover:border-purple-900 hover:scale-105 
+                rounded-lg delay-75 transition-all ease-in-out">
                     <Link href={'https://t.me/09945978023'} >
                         <Telegram sx={{fontSize:"108px"}} className='text-orange-600 ml-2 text-center'/>
                         <h1 className='text-center font-semibold text-footer-color-black text-2xl p-2 mt-8'>Telegram</h1>
                     </Link>
                 </div>
-                <div className="flex justify-center w-1/3 p-4 mt-8 hover:border-2 hover:border-purple-900 hover:scale-105 rounded-lg delay-75">
+                <div className="flex justify-center w-1/3 p-4 mt-8 
+                hover:border-2 hover:border-purple-900 hover:scale-105 
+                rounded-lg delay-75 transition-all ease-in-out">
                     <Link href={'https://akbarpouralireza1@gmail.com'} type='email'>
                         <Email sx={{fontSize:"108px"}} className='text-orange-600 ml-2 text-center'/>
                         <h1 className='text-center font-semibold text-footer-color-black text-2xl p-2 mt-8'>Email</h1>

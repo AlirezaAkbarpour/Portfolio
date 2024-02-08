@@ -25,7 +25,7 @@
 
 body{
      scrollbar-width: none;
-     scroll-behavior: smooth;
+     scroll-behavior: auto;
 }
 body::-webkit-scrollbar{
   display: none;
