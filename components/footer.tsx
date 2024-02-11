@@ -1,12 +1,10 @@
 'use client'
-import React ,{Suspense, useRef} from 'react'
+import React from 'react'
 import Circle from './svgs/circle'
 import Link from 'next/link'
 import Feedback from './actions/feedback'
-import { useGSAP } from '@gsap/react'
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import Loading from './loading'
 
 gsap.registerPlugin(ScrollTrigger)
 

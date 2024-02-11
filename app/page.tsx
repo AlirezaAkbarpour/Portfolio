@@ -7,8 +7,7 @@ import Blog_banner from '../components/blog-banner'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
-import React, { Suspense, useRef } from 'react'
-import Loading from '@/components/loading'
+import React, { useRef } from 'react'
 
 export default function Home() {
     //refs
@@ -47,7 +46,6 @@ export default function Home() {
     },{scope:container})
 
     return (
-      <Suspense fallback={<Loading/>}>
         <div className='w-full h-auto min-h-[720px] bg-background-theme' ref={container}>
           <div className="w-full h-screen mt-12 flex flex-col md:flex-row justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
@@ -114,6 +112,5 @@ export default function Home() {
                   <Blog_banner/>
           </div>
         </div>
-        </Suspense>
     )
   }
