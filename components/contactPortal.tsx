@@ -36,6 +36,7 @@ export default function ContactPortal({isOpen,OnClose}:Props){
     if(!isOpen) return null;
 
     return createPortal(
+        <div className='w-full h-full absolute z-50 top-0 left-0'>
         <div className='w-[640px] h-[360px] bg-white opacity-0 rounded-lg p-2 fixed top-1/4 left-1/3 shadow-2xl' ref={layout}>
                 <div className='w-full h-16 flex justify-between p-4'>
                         <h1 className='text-4xl font-archivo font-semibold text-footer-color-black'>Contact Me</h1>
@@ -73,6 +74,7 @@ export default function ContactPortal({isOpen,OnClose}:Props){
                     </Link>
                 </div>
                 </div>
+        </div>
         </div>
     ,document.getElementById("not") as HTMLElement)
 }
