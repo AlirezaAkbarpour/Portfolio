@@ -11,7 +11,6 @@ const archivo = Archivo({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Aka',
   description: 'Alireza Akbarpour',
-  
 }
 
 

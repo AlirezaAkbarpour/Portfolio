@@ -7,7 +7,8 @@ import Blog_banner from '../components/blog-banner'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
-import React, { useRef } from 'react'
+import React, { Fragment, useRef } from 'react'
+
 
 export default function Home() {
     //refs
@@ -45,7 +46,11 @@ export default function Home() {
         scrollTl.from('.item-box',{opacity:0,stagger:{each:0.5}})
     },{scope:container})
 
+
+
+
     return (
+      <Fragment>
         <div className='w-full h-auto min-h-[720px] bg-background-theme' ref={container}>
           <div className="w-full h-screen mt-12 flex flex-col md:flex-row justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
@@ -54,13 +59,16 @@ export default function Home() {
               <div className="desc w-full text-xl text-icon-blue/80 font-light mx-4 py-4 px-2">Web Developer & FrontEnd Developer by React.js</div>
               <div className="actions flex px-8 mt-5 w-full">
                   <div className='actionOne'>
-                     <Link href='portfolio' className=' w-28 h-10 bg-orange-700 text-white 
-                     text-center p-2 text-xl m-2 font-semibold '>Hire Me</Link>
+                     <Link href='portfolio'>
+                      <p className='w-28 h-10 bg-orange-700 text-white 
+                     text-center p-2 text-xl m-2 font-semibold'>Hire Me</p>
+                     </Link>
                   </div>
                   <div className='actionTwo'>
-                    <Link href='about' className=' w-32 h-10 border-2 border-orange-700 text-icon-blue 
-                    text-center p-2 text-base my-2 mx-6 font-light hover:bg-orange-700 hover:text-white delay-100 ease-linear hover:font-normal'>
-                    Know more
+                    <Link href='about'>
+                        <p className=' w-28 h-10 border-2 border-orange-700 text-icon-blue 
+                           text-center p-2 text-base mt-2 mx-6 font-light hover:bg-orange-700
+                            hover:text-white delay-100 ease-linear hover:font-medium'>Know more</p>
                     </Link>
                   </div>
                   
@@ -112,5 +120,6 @@ export default function Home() {
                   <Blog_banner/>
           </div>
         </div>
+        </Fragment>
     )
   }
