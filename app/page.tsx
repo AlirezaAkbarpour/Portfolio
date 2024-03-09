@@ -102,15 +102,15 @@ export default function Home() {
                   <div className=" py-2">
                     <Image src={'/images/light-icon.png'} className='mb-1 w-16 h-14 mr-1' alt='light' width={64} height={64}/>
                   </div>
-                  <div className='font-light text-zinc-600 my-1 text-base'>UI/UX Designer</div>
-                  <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>
+                  <div className='font-light text-zinc-600 my-1 text-base'>Creation Ideas</div>
+                  <div className='w-56 font-light text-sm'>We Creative impossible ideas in any way</div>
             </div>
             <div className='item-box w-1/4'>
             <div className="py-2">
                     <Image src={'/images/webcam-icon.png'} className='w-16 h-14 mb-1 mr-1' alt='light' width={64} height={68}/>
                   </div>
-                  <div className='font-light text-zinc-600 my-1 text-base'>UI/UX Designer</div>
-                  <div className='w-56 font-light text-sm'>The user interface is the graphical layout</div>
+                  <div className='font-light text-zinc-600 my-1 text-base'>Complex Plans</div>
+                  <div className='w-56 font-light text-sm'>We implementation of complex plans on Web2/Web3</div>
             </div>
           </div>
           <div className="w-full flex justify-center">
