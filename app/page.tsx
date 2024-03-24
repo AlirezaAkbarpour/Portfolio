@@ -51,8 +51,8 @@ export default function Home() {
 
     return (
       <Fragment>
-        <div className='w-full h-auto min-h-[720px] bg-background-theme' ref={container}>
-          <div className="w-full h-screen mt-12 flex flex-col md:flex-row justify-between">
+        <div className='w-full h-auto min-h-[1280px] bg-background-theme mx-auto container' ref={container}>
+          <div className="w-full h-1/2 mt-12 flex flex-col md:flex-row justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
               <div className="titleOne w-full text-6xl text-icon-blue font-bold mx-4 p-2">Hy ! I Am</div>
               <div className="titleTwo w-full text-6xl text-icon-blue font-bold mx-4 p-2">Alireza Akbarpour</div>
@@ -113,11 +113,13 @@ export default function Home() {
                   <div className='w-56 font-light text-sm'>We implementation of complex plans on Web2/Web3</div>
             </div>
           </div>
-          <div className="w-full flex justify-center">
-                  <Works_banner/> 
-          </div>
-          <div className='w-full flex justify-center'>
-                  <Blog_banner/>
+          <div className='w-full pb-20'>
+            <div className="w-full flex justify-center">
+                    <Works_banner/> 
+            </div>
+            <div className='w-full flex justify-center'>
+                    <Blog_banner/>
+            </div>
           </div>
         </div>
         </Fragment>

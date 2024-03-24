@@ -12,7 +12,7 @@ export default function Footer() {
 
     return (
       <div >
-      <div className='footer w-full top-full h-[220px] bg-footer-color-black mt-8 rounded-t-3xl flex'>
+      <div className='footer w-full top-full h-[220px] bg-footer-color-black rounded-t-3xl flex mt-20'>
       <div className='w-1/2 flex justify-start'>
           <div className='w-1/3'>
               <div id="icon" className="w-64 h-16 p-2 mt-2 flex align-middle text-white 
