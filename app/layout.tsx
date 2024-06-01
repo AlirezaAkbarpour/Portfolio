@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Archivo } from 'next/font/google'
 import './globals.css'
 import Navbar from '../components/Navbar'
@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   description: 'Alireza Akbarpour',
 }
 
+export const viewPort : Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f4eff1' },
+    { media: '(prefers-color-scheme: dark)', color: '#f4eff1' },
+  ],
+}
+
 
 export default function RootLayout({
   children,
@@ -22,7 +29,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={archivo.className}>
-      <body className='max-w-screen-2xl min-h-screen bg-background-base container mx-auto'>
+      <body className='max-w-screen-2xl min-h-full bg-background-base container mx-auto'>
         <Navbar/>
         <div className="container min-w-full mx-auto">   
           <div className='w-full min-h-full flex justify-center'>

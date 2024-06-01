@@ -45,7 +45,7 @@ export default function Footer() {
               </div>
           </div>
           <div className='w-1/3 '>
-              <div className='text-footer-light-text mt-6 text-xl'>Other Sites</div>
+              <div className='text-footer-light-text mt-6 text-xl'>Follow Me</div>
               <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition hover:delay-500 ease-in-out'>
                 <Link href={'/'} >
                       Twitter

@@ -26,13 +26,21 @@ export default function Home() {
         toggleActions:"play none none reverse",
       }
     })
+    const scrollT2 = gsap.timeline({
+      scrollTrigger:{
+        trigger: '.banner',
+        start:'top 80%',
+        end: 'bottom bottom',
+        toggleActions:"play none none none"
+      }
+    })
     useGSAP(()=>{
         timeLine.from('.titleOne',{opacity:0, x:30 , duration:'0.4'})
         timeLine.from('.titleTwo',{opacity:0, x:30 , duration:'0.4'})
         timeLine.from('.desc',{opacity:0,duration:'0.4'})
         timeLine.from('.actionOne',{opacity:0,x:-20,duration:'0.4'})
         timeLine.from('.actionTwo',{opacity:0,duration:'0.4'})
-  
+
     },{scope:container})
   
     useGSAP(()=>{
@@ -46,13 +54,15 @@ export default function Home() {
         scrollTl.from('.item-box',{opacity:0,stagger:{each:0.5}})
     },{scope:container})
 
-
+    useGSAP(()=>{
+      scrollT2.from('#banner',{opacity:0,stagger:{each:1},delay:0.5})
+    },{scope:container})
 
 
     return (
       <Fragment>
-        <div className='w-full h-auto min-h-[1280px] bg-background-theme mx-auto container' ref={container}>
-          <div className="w-full h-1/2 mt-12 flex flex-col md:flex-row justify-between">
+        <div className='w-full h-full bg-background-theme mx-auto container' ref={container}>
+          <div className="w-full h-[750px] mt-12 flex flex-col md:flex-row justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
               <div className="titleOne w-full text-6xl text-icon-blue font-bold mx-4 p-2">Hy ! I Am</div>
               <div className="titleTwo w-full text-6xl text-icon-blue font-bold mx-4 p-2">Alireza Akbarpour</div>
@@ -113,11 +123,11 @@ export default function Home() {
                   <div className='w-56 font-light text-sm'>We implementation of complex plans on Web2/Web3</div>
             </div>
           </div>
-          <div className='w-full pb-20'>
-            <div className="w-full flex justify-center">
+          <div className='w-full my-12'>
+            <div id='banner' className="w-full flex justify-center">
                     <Works_banner/> 
             </div>
-            <div className='w-full flex justify-center'>
+            <div id='banner' className='w-full flex justify-center'>
                     <Blog_banner/>
             </div>
           </div>
