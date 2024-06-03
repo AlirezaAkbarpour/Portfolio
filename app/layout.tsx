@@ -9,7 +9,7 @@ import { Suspense } from 'react'
 const archivo = Archivo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Alireza Akbarpour',
+  title: 'Home',
   description: 'Alireza Akbarpour',
 }
 
@@ -29,6 +29,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={archivo.className}>
+      <head>
+        <link rel='icon' href='icon.png' sizes='any'/>
+      </head>
       <body className='max-w-screen-2xl min-h-full bg-background-base container mx-auto'>
         <Navbar/>
         <div className="container min-w-full mx-auto">   

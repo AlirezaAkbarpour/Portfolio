@@ -29,9 +29,10 @@ export default function Home() {
     const scrollT2 = gsap.timeline({
       scrollTrigger:{
         trigger: '.banner',
-        start:'top 80%',
-        end: 'bottom bottom',
-        toggleActions:"play none none none"
+        start:'540px top',
+        statusbar:{visible:true},
+        end: '800px bottom',
+        toggleActions:"play none none reverse"
       }
     })
     useGSAP(()=>{
@@ -55,7 +56,7 @@ export default function Home() {
     },{scope:container})
 
     useGSAP(()=>{
-      scrollT2.from('#banner',{opacity:0,stagger:{each:1},delay:0.5})
+      scrollT2.from('#banner',{opacity:0,marginLeft:20,stagger:{each:1,yoyo:true},delay:0.5})
     },{scope:container})
 
 
@@ -69,7 +70,7 @@ export default function Home() {
               <div className="desc w-full text-xl text-icon-blue/80 font-light mx-4 py-4 px-2">Web Developer & FrontEnd Developer by React.js</div>
               <div className="actions flex px-8 mt-5 w-full">
                   <div className='actionOne'>
-                     <Link href='portfolio'>
+                     <Link href='about'>
                       <p className='w-28 h-10 bg-orange-700 text-white 
                      text-center p-2 text-xl m-2 font-semibold'>Hire Me</p>
                      </Link>
@@ -123,7 +124,7 @@ export default function Home() {
                   <div className='w-56 font-light text-sm'>We implementation of complex plans on Web2/Web3</div>
             </div>
           </div>
-          <div className='w-full my-12'>
+          <div className='banners w-full my-12'>
             <div id='banner' className="w-full flex justify-center">
                     <Works_banner/> 
             </div>
