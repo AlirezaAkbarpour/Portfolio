@@ -52,7 +52,7 @@ export default function ContactPortal({isOpen,OnClose}:Props){
                 <div className="flex justify-center w-1/3 p-4 mt-8 
                 hover:border-2 hover:border-orange-500 hover:scale-105 
                 rounded-lg delay-75 transition-all ease-in-out">
-                    <Link href={'/'} >
+                    <Link href={'https://instagram.com/alirezaakbarpour2024'} target='_instagram' >
                         <InstagramIcon sx={{fontSize:"108px"}} className='text-orange-600 ml-2 text-center'/>
                         <h1 className='text-center font-semibold text-footer-color-black text-2xl p-2 mt-8'>Instagram</h1>
                     </Link>
@@ -60,7 +60,7 @@ export default function ContactPortal({isOpen,OnClose}:Props){
                 <div className="flex justify-center w-1/3 p-4 mt-8 
                 hover:border-2 hover:border-orange-500 hover:scale-105 
                 rounded-lg delay-75 transition-all ease-in-out">
-                    <Link href={'https://t.me/09945978023'} >
+                    <Link href={'https://t.me/ali2049aka'} target='_telegram' >
                         <Telegram sx={{fontSize:"108px"}} className='text-orange-600 ml-2 text-center'/>
                         <h1 className='text-center font-semibold text-footer-color-black text-2xl p-2 mt-8'>Telegram</h1>
                     </Link>
@@ -68,7 +68,7 @@ export default function ContactPortal({isOpen,OnClose}:Props){
                 <div className="flex justify-center w-1/3 p-4 mt-8 
                 hover:border-2 hover:border-orange-500 hover:scale-105 
                 rounded-lg delay-75 transition-all ease-in-out">
-                    <Link href={'https://akbarpouralireza1@gmail.com'} type='email'>
+                    <Link href={'mailto:akbarpouralireza1@gmail.com'} type='email' target='_email'>
                         <Email sx={{fontSize:"108px"}} className='text-orange-600 ml-2 text-center'/>
                         <h1 className='text-center font-semibold text-footer-color-black text-2xl p-2 mt-8'>Email</h1>
                     </Link>
