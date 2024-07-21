@@ -52,17 +52,29 @@ export default function Page() {
         </div>
         </div>
         <div className='w-2/3 h-36 mx-auto mt-20 flex justify-between px-2'>
-              <div className='w-[136px] h-[136px] bg-white rounded-2xl shadow-2xl p-1'>
+              <div className='w-[136px] h-[136px] bg-white rounded-2xl shadow-2xl p-1 transition-all ease-in hover:bg-orange-400'>
                 <LinkedIn className='w-full h-full' sx={{fontSize:'8rem'}}/>
               </div>
-              <div className='w-[136px] h-[136px] bg-white rounded-2xl shadow-2xl p-1'>
+              <div className='w-[136px] h-[136px] bg-white rounded-2xl shadow-2xl p-1 transition-all ease-in hover:bg-blue-400'>
                 <Instagram sx={{fontSize:'8rem'}}/>
               </div>
-              <div className='w-[136px] h-[136px] bg-white rounded-2xl shadow-2xl p-1 '>
+              <div className='w-[136px] h-[136px] bg-white rounded-2xl shadow-2xl p-1 transition-all ease-in hover:bg-red-400'>
                 <X sx={{fontSize:'8rem'}}/>
               </div>
         </div>
-        
+        <div className='w-full min-h-96 bg-white mt-32 mx-auto '>
+          <div className='w-full flex justify-center'>
+            <div className='w-full text-4xl font-bold py-14 pl-48 text-start'>Last Portfolio</div>
+          </div>
+            <div className='bg-background-theme'>
+              <div>
+                <div>Title</div>
+              </div>
+              <div>
+                <div>Description</div>
+              </div>
+            </div>
+        </div>
     </div>
   )
 }
