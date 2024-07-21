@@ -24,6 +24,9 @@ const config: Config = {
       fontFamily:{
         'archivo':['archivo'],
       },
+      width:{
+        'p':"820px"
+      }
     },
   },
   plugins: [],

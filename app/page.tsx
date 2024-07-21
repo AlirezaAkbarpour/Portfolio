@@ -26,15 +26,7 @@ export default function Home() {
         toggleActions:"play none none reverse",
       }
     })
-    const scrollT2 = gsap.timeline({
-      scrollTrigger:{
-        trigger: '.banner',
-        start:'540px top',
-        statusbar:{visible:true},
-        end: '800px bottom',
-        toggleActions:"play none none reverse"
-      }
-    })
+
     useGSAP(()=>{
         timeLine.from('.titleOne',{opacity:0, x:30 , duration:'0.4'})
         timeLine.from('.titleTwo',{opacity:0, x:30 , duration:'0.4'})
@@ -56,16 +48,16 @@ export default function Home() {
     },{scope:container})
 
     useGSAP(()=>{
-      scrollT2.from('#banner',{opacity:0,marginLeft:20,stagger:{each:1,yoyo:true},delay:0.5})
+      timeLine.from('#banner',{opacity:0,marginLeft:20,stagger:{each:1}})
     },{scope:container})
 
 
     return (
       <Fragment>
         <div className='w-full h-full bg-background-theme mx-auto container' ref={container}>
-          <div className="w-full min-h-[750px] mt-12 flex flex-col md:flex-row justify-between">
+          <div className="w-full min-h-[750px] mt-12 flex max-md:flex-row justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
-              <div className="titleOne w-full text-6xl text-icon-blue font-bold mx-4 p-2">Hy ! I Am</div>
+              <div className="titleOne w-full text-6xl text-icon-blue font-bold mx-4 p-2 max-md:text-4xl">Hy ! I Am</div>
               <div className="titleTwo w-full text-6xl text-icon-blue font-bold mx-4 p-2">Alireza Akbarpour</div>
               <div className="desc w-full text-xl text-icon-blue/80 font-light mx-4 py-4 px-2">Web Developer & FrontEnd Developer by React.js</div>
               <div className="actions flex px-8 mt-5 w-full">
@@ -97,26 +89,26 @@ export default function Home() {
             </div>
           </div>
           <div className='w-full h-48 flex justify-between bg-white p-2' ref={itemBoxRef}>
-            <div className='counter-box w-1/4'> 
+            <div className='counter-box w-1/4 mt-2'> 
                   <div>
                     <Banner_cube/>
                   </div>
             </div>
-            <div className='item-box w-1/4'>
+            <div className='item-box w-1/4 mt-2'>
                   <div className='py-2'>
                     <Image src={'/images/source-code.png'} className='w-16 h-14 mb-1 mr-2' alt='code' width={64} height={68}/>
                   </div>
                   <div className='font-light text-base text-zinc-600 my-1'>Front End Developer</div>
                   <div className='w-56 font-light text-sm'>We provide structured graphical user interface</div>
             </div>
-            <div className='item-box w-1/4'>
+            <div className='item-box w-1/4 mt-2'>
                   <div className=" py-2">
-                    <Image src={'/images/light-icon.png'} className='mb-1 w-16 h-14 mr-1' alt='light' width={64} height={64}/>
+                    <Image src={'/images/light-icon.png'} className='mb-1 w-16 h-14 mr-1 ' alt='light' width={64} height={64}/>
                   </div>
                   <div className='font-light text-zinc-600 my-1 text-base'>Creation Ideas</div>
                   <div className='w-56 font-light text-sm'>We Creative impossible ideas in any way</div>
             </div>
-            <div className='item-box w-1/4'>
+            <div className='item-box w-1/4 mt-2'>
             <div className="py-2">
                     <Image src={'/images/webcam-icon.png'} className='w-16 h-14 mb-1 mr-1' alt='light' width={64} height={68}/>
                   </div>

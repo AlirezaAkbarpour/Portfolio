@@ -25,7 +25,7 @@ export default function Feedback() {
   return (
     <div className='w-3/4 h-16 p-2 mt-6 rounded-xl bg-violet-800 '>
             <form className='flex' onSubmit={(e:any)=>messageHandler(e)}>
-                <input type='text' className='font-mono font-normal w-2/3 p-2 m-1' placeholder='Enter your message:' ref={message} onChange={(e:any)=>changeHandler()}></input>
+                <input type='text' className='font-mono font-normal w-2/3 p-2 m-1 focus:border-white' placeholder='Enter your message:' ref={message} onChange={(e:any)=>changeHandler()}></input>
                 <button className='w-1/3 m-1 p-2 bg-white text-violet-950 hover:bg-violet-400 hover:transition-all hover:delay-100 hover:text-white' type='submit' onClick={(e:any)=>messageHandler(e)}>Send Notification</button>
             </form>
     </div>

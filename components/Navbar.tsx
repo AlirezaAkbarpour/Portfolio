@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const pathName: string|null= usePathname()
   return (
-    <nav className="w-full max-w-full h-16 flex justify-between 
+    <nav className="w-full max-w-full h-16 flex justify-around 
     align-middle fixed top-0 left-0 z-10 bg-background-theme
     ">
           <div id="icon" className="w-64 h-16 p-2 mt-2 flex align-middle text-icon-blue 
