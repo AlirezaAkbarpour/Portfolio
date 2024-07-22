@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Arrow from './svgs/arrow'
+import Arrow from '../svgs/arrow'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
