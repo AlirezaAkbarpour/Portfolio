@@ -3,9 +3,10 @@ import { Archivo } from 'next/font/google'
 import './globals.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
-import Loading from '../components/loading'
 import { Suspense } from 'react'
+import { lazy } from 'react'
 
+const Loading = lazy(()=>import('@/components/loading'))
 const archivo = Archivo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

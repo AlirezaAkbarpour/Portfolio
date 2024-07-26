@@ -9,3 +9,4 @@ function addHoverClass(index) {
 }}
 // Start the hover effect
 addHoverClass(0);*/
+
