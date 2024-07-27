@@ -15,7 +15,6 @@ type Props = {
 
 
 export default function ContactPortal({isOpen,OnClose}:Props){
-    
     const layout : React.RefObject<HTMLDivElement> = useRef(null)
     const timeline = gsap.timeline()
     const {contextSafe} = useGSAP({scope:layout})
