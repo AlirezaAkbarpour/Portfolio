@@ -55,11 +55,11 @@ export default function Home() {
     return (
       <Fragment>
         <div className='w-full h-full bg-background-theme mx-auto container' ref={container}>
-          <div className="w-full min-h-[750px] mt-12 flex max-md:flex-row justify-between">
+          <div className="w-full h-screen mt-16 flex max-md:flex-row justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
-              <div className="titleOne w-full text-6xl text-icon-blue font-bold mx-4 p-2 max-md:text-4xl">Hy ! I Am</div>
-              <div className="titleTwo w-full text-6xl text-icon-blue font-bold mx-4 p-2">Alireza Akbarpour</div>
-              <div className="desc w-full text-xl text-icon-blue/80 font-light mx-4 py-4 px-2">Web Developer & FrontEnd Developer by React.js</div>
+              <div className="titleOne w-full font-archivo text-6xl text-icon-blue font-bold mx-4 p-2 max-lg:text-2xl">Hy ! I Am</div>
+              <div className="titleTwo w-full font-archivo text-6xl text-icon-blue font-bold mx-4 p-2 max-lg:text-2xl">Alireza Akbarpour</div>
+              <div className="desc w-full font-archivo text-xl text-icon-blue/80 font-light mx-4 py-4 px-2 max-lg:text-lg">Web Developer & FrontEnd Developer</div>
               <div className="actions flex px-8 mt-5 w-full">
                   <div className='actionOne'>
                      <Link href='about'>
@@ -78,7 +78,7 @@ export default function Home() {
               </div>
               <div className="detail flex w-full justify-start mt-16 mx-2">
                   <Image className='react-spinner' src={'/images/fa-brands_react.png'} alt='spinner' width={120} height={120}/>
-                  <div className="desc2 w-72 h-20 text-base font-light text-icon-blue/80 py-8 px-2">
+                  <div className="desc2 w-72 h-20 text-base font-light text-icon-blue py-9 px-2">
                     Product Designer and Developer specialized in UI/UX
                   </div>
                   <Image src={'/images/icons8-curly-arrow-80.png'} alt='spinner' width={120} height={120} className='arrow relative bottom-10 left-8 scale-125 -rotate-12 '/>

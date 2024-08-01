@@ -14,7 +14,7 @@ export default function Page() {
 
 
   useGSAP(()=>{
-     timeline.from('.page',{opacity:0,delay:.2,ease:'expo.in',duration:0.5,stagger:{amount:.5}})
+     timeline.from('.page',{opacity:0,marginTop:20,delay:.2,ease:'power3',duration:0.5,stagger:{amount:.5}})
      gsap.from('#Mystar',{y:20,yoyo:true,repeat:-1,duration:2.5})
      gsap.to('#Mystar2',{y:180,yoyo:true,repeat:-1,duration:3.4})
      gsap.from('#Mystar3',{y:270,yoyo:true,repeat:-1,duration:2.1})
