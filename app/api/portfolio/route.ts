@@ -1,7 +1,7 @@
+import { Portfolios } from "@/interfaces/portfolios";
 import type { NextApiRequest , NextApiResponse} from "next";
 
-const portfolios : 
-{id:number,name:string,description:string,likes:number,links:{github:string,main_page:string}} = 
+const portfolios : Portfolios = 
     {
         id:2525,
         name:'next js media',

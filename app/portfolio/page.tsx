@@ -7,6 +7,7 @@ import gsap from 'gsap'
 import {useRef } from 'react'
 import Link from 'next/link'
 import { CSSTransition } from 'react-transition-group'
+import LastPortfolio from '@/components/portfolio/last-item'
 
 export default function Page() {
   const container : React.RefObject<HTMLDivElement> = useRef(null)
@@ -70,6 +71,7 @@ export default function Page() {
                 <X sx={{fontSize:'8rem'}}/>
               </div></Link>
         </div>
+        <LastPortfolio/>
     </div>
   )
 }
