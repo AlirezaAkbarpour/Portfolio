@@ -10,13 +10,13 @@ export default function Loading() {
   const timeline = gsap.timeline()
 
   useGSAP(()=>{
-    timeline.from(dotRef.current,{opacity:1})
+    timeline.from(".dotref",{opacity:1})
   },{scope:container})
 
   return (
     <div className='w-full z-50 fixed h-full bg-orange-300 flex items-center justify-center flex-wrap'>
           <div className='w-full h-16 text-center text-4xl font-bold animate-ping delay-1000 text-white'>
-            Loading <span ref={dotRef}>...</span>
+            Loading <span className='dotref' ref={dotRef}>...</span>
           </div>
     </div>
   )

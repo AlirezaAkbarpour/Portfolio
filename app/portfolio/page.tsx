@@ -8,6 +8,7 @@ import {useRef } from 'react'
 import Link from 'next/link'
 import { CSSTransition } from 'react-transition-group'
 import LastPortfolio from '@/components/portfolio/last-item'
+import ListPortfolioComponent from '@/components/portfolio/list-portfolios'
 
 export default function Page() {
   const container : React.RefObject<HTMLDivElement> = useRef(null)
@@ -25,7 +26,7 @@ export default function Page() {
   },{scope:container})
 
   return (
-    <div ref={container} className='w-full min-h-screen mt-10 bg-background-theme z-0' >  
+    <div ref={container} className='w-full mt-10 bg-background-theme z-0' >  
         <CSSTransition in={true} timeout={3000} classNames='page' unmountOnExit>
         <div className='page flex justify-center '>
           <div className='w-full relative z-10'>
@@ -56,7 +57,7 @@ export default function Page() {
           </div>
         </div>
         </CSSTransition>
-        <div className='page w-2/3 h-36 mx-auto mt-20 flex justify-between px-2'>
+        <div className='page w-2/3 h-48 mx-auto mt-20 flex justify-between px-2'>
             <Link href=''><div id='item' className='w-[136px] h-[136px] bg-white rounded-2xl shadow-2xl p-1
                transition-all ease-in-out duration-300 cursor-pointer hover:bg-gradient-to-t from-blue-500 to-blue-300 hover:text-white'>
                 <LinkedIn className='w-full h-full' sx={{fontSize:'8rem'}}/>
@@ -71,7 +72,12 @@ export default function Page() {
                 <X sx={{fontSize:'8rem'}}/>
               </div></Link>
         </div>
-        <LastPortfolio/>
+        <div className='page w-full'>
+          <LastPortfolio/>
+        </div>
+        <div className='page w-full '>
+          <ListPortfolioComponent/>
+        </div>
     </div>
   )
 }

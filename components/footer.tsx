@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Footer() {
 
     return (
-      <div >
+      <div className='z-50'>
       <div className='footer w-full top-full h-[220px] bg-footer-color-black rounded-t-3xl flex mt-20'>
       <div className='w-1/2 flex justify-start'>
           <div className='w-1/3'>

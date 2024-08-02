@@ -55,7 +55,7 @@ export default function Home() {
     return (
       <Fragment>
         <div className='w-full h-full bg-background-theme mx-auto container' ref={container}>
-          <div className="w-full h-screen mt-16 flex max-md:flex-row justify-between">
+          <div className="w-full h-[40rem] mt-16 flex max-md:flex-row justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
               <div className="titleOne w-full font-archivo text-6xl text-icon-blue font-bold mx-4 p-2 max-lg:text-2xl">Hy ! I Am</div>
               <div className="titleTwo w-full font-archivo text-6xl text-icon-blue font-bold mx-4 p-2 max-lg:text-2xl">Alireza Akbarpour</div>
