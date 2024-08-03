@@ -8,7 +8,8 @@ export default function ListItemComponent() {
     <div className='w-2 h-full relative left-64 bg-white'></div>
     <div className='w-1/4 flex justify-end'>
       <Button color='error' className='w-16 h-16'>
-        <ArrowForward sx={{width:'52px',height:'48px'}} className='text-white rounded-md bg-orange-500'/>
+        <ArrowForward sx={{width:'52px',height:'48px'}} className='text-white rounded-md
+         bg-orange-500 hover:bg-white hover:text-orange-500'/>
       </Button>
     </div>
   </div>

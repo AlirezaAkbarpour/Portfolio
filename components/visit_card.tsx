@@ -1,23 +1,25 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import gsap from 'gsap'
 import ScrollGold from './svgs/scroll-gold'
+import gsap from 'gsap'
+import { useGSAP, } from '@gsap/react'
 
 export default function VisitCard() {
-  const child = useRef<HTMLDivElement>(null)
+  const toggle = useRef<HTMLDivElement>(null)
   const [large,setLarge] = useState(false)
+  const container = useRef<HTMLDivElement>(null)
+  const text = useRef<HTMLParagraphElement>(null)
+  
   const clickHandle = ()=>{
       setLarge(large=>!large)
-    }
-  useEffect(()=>{
-    if(child.current && child.current.style.height < '96rem'){
-      setLarge(true)
-    }
-    
-  },[])
+      if(large) gsap.to(toggle.current,{height:'26rem',duration:0.4,ease:'power2.in'})
+      if(!large) gsap.to(toggle.current,{height:'45rem',duration:0.4,ease:'power2.out'})
+      }
+  const classRotate = large?'rotate-180':''
+
   return (
-    <div className='w-3/4 my-28'>
-        <div className='visit w-full rounded-lg transition-all duration-300 delay-75 ease-linear  p-10 bg-white' style={large?{height:'45rem'}:{height:'26rem'}} ref={child}>
+    <div className='w-3/4 my-28' ref={container}>
+        <div className='visit w-full rounded-lg p-10 bg-white' ref={toggle}>
            <div className='flex justify-between h-[24rem]'>
               <div className='w-1/2 p-4'>
                   <h1 className='text-4xl p-4 text-footer-color-black font-bold'>Alireza Akbarpour</h1>
@@ -29,15 +31,17 @@ export default function VisitCard() {
                   <div className='w-full h-80 bg-slate-600 rounded-2xl m-4'></div>
             </div>
            </div>
-           {large&&<div className="w-full mx-auto">
-                <h1 className='text-xl text-gray-600 px-4'>Hi I study computer engineering in Tabriz university</h1>
+           {large&&<div className=" w-full mx-auto">
+                <h1 ref={text} className='text text-xl text-gray-600 px-4'>Hi I study computer engineering in Tabriz university</h1>
            </div>}
         </div>
         <div className='w-full bg-footer-color-black 
-          h-12 rounded-b-lg flex justify-center py-2 hover:cursor-pointer transition-colors '  
+          h-12 rounded-b-lg flex justify-center py-2 hover:cursor-pointer transition-all delay-75'  
           onClick={()=>clickHandle()}
         >
+          <div className={classRotate}>
             <ScrollGold/>
+          </div>
         </div>
     </div>
   )

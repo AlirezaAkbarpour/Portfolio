@@ -56,12 +56,15 @@ export default function LastPortfolio() {
                 </div>
                 <div className="w-full p-4 flex justify-end">
                       <div className="w-96 h-20 bg-white p-1 shadow-md flex mx-4 items-center justify-center rounded-2xl">
-                              <Button href={`${data.portfolio.links.github}`} variant="contained" className="w-[96px] h-16 mx-1 flex justify-center rounded-2xl bg-gray-600">
+                              <Button href={`${data.portfolio.links.github}`} variant="contained" 
+                                sx={{marginX:2,backgroundColor:'GrayText',":hover":{backgroundColor:'darkslategrey',color:'black'}}}
+                              >
                                 <Language sx={{width:'48px',height:'48px',color:'white'}}/>
                               </Button>
                               <Divider orientation="vertical" variant="fullWidth" className="mx-4"/>
-                              <Button href={`${data.portfolio.links.main_page}`} className="w-[210px] h-16 flex justify-center bg-orange-500 text-xl font-normal mx-1 rounded-2xl text-center" 
-                              variant="contained" sx={{color:'white'}}>More</Button>
+                              <Button href={`${data.portfolio.links.main_page}`}
+                              variant="contained" sx={{color:'white',width:'210px',height:'4rem',
+                              backgroundColor:'orangered',fontSize:'1rem',':hover':{backgroundColor:'darkslategrey',}}}>More</Button>
                       </div>
                 </div>
             </div>
