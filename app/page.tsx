@@ -62,9 +62,9 @@ export default function Home() {
               <div className="desc w-full font-archivo text-xl text-icon-blue/80 font-light mx-4 py-4 px-2 max-lg:text-lg">Web Developer & FrontEnd Developer</div>
               <div className="actions flex px-8 mt-5 w-full">
                   <div className='actionOne'>
-                     <Link href='about'>
+                     <Link href='about' className='w-32 h-14'>
                       <p className='w-28 h-10 bg-orange-700 text-white 
-                     text-center p-2 text-xl m-2 font-semibold'>Hire Me</p>
+                      text-center p-2 text-xl m-2 font-semibold btn_shadow  align-middle'>Hire Me</p>
                      </Link>
                   </div>
                   <div className='actionTwo'>
