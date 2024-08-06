@@ -1,11 +1,46 @@
+'use client'
 import { GitHub } from '@mui/icons-material'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+
 
 export default function Github_Ban() {
+  gsap.registerPlugin()
+  const cart_ref = useRef<HTMLDivElement>(null)
+  useEffect(()=>{
+      const width = window.innerWidth
+      cart_ref.current?.addEventListener("mousemove",(e)=>{
+          if(e.clientX>width/2) {
+          gsap.to('.cart',{
+              rotateY:45,
+              rotateZ:10,
+              immediateRender:false,
+              ease:'power3',
+            })
+          }else{
+            gsap.to('.cart',{
+              rotateY:-20,
+              rotationZ:-10,
+              immediateRender:false,
+              ease:'power3',
+            })
+          }
+      })
+      cart_ref.current?.addEventListener("mouseleave",()=>{
+        gsap.to('.cart',{
+          rotateY:0,
+          rotateZ:0,
+          ease:'power3.out',
+          duration:0.5
+        })
+      })
+  })
   return (
-    <Link href={'https://github.com'}>
-    <div className='w-p h-80 bg-white shadow-2xl rounded-2xl mt-10 flex 
+    <Link href={'https://github.com'} className='w-full h-full'>
+    <div className='cart w-p h-80 bg-white shadow-2xl rounded-2xl mt-10 flex 
       transition-all ease-in hover:bg-gray-600 hover:text-white hover:cursor-pointer'
+      ref={cart_ref}
       >
         <div className='w-1/2 mx-20 mt-20'>
             <div className="text-7xl font-bold text-center first-letter:font-extrabold p-2 " >Github</div>

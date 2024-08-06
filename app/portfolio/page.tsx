@@ -41,7 +41,7 @@ export default function Page() {
             </div> 
         </div>
           <div id='git-pr' className="w-full h-full flex 
-        justify-center mt-4 py-4 px-auto">
+        justify-center mt-4 py-4 z-50 px-auto">
             <Github_Ban/>
         </div>
           <div className='w-full relative z-10'> 
