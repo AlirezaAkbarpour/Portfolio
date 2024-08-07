@@ -8,6 +8,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 import React, { Fragment, useRef } from 'react'
+import VisitCard from '@/components/visit_card'
 
 
 export default function Home() {

@@ -11,19 +11,18 @@ export default function Github_Ban() {
   useEffect(()=>{
       const width = window.innerWidth
       cart_ref.current?.addEventListener("mousemove",(e)=>{
+        console.log(e.clientX/100,e.clientY)
           if(e.clientX>width/2) {
           gsap.to('.cart',{
-              rotateY:45,
-              rotateZ:10,
+              rotateZ:e.clientX/100,
+              rotateX:e.clientY/20,
               immediateRender:false,
-              ease:'power3',
             })
           }else{
             gsap.to('.cart',{
-              rotateY:-20,
-              rotationZ:-10,
+              rotateZ:-e.clientX/100,
+              rotationX:-e.clientY/20,
               immediateRender:false,
-              ease:'power3',
             })
           }
       })

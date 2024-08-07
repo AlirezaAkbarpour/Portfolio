@@ -40,7 +40,7 @@ export default function LastPortfolio() {
                             </div>
                             <Divider orientation="vertical"/>
                             <div className="w-1/2 h-full flex items-center justify-center">
-                              <Star color="warning" sx={{width:'48px',height:'48px'}}/>
+                              <Star sx={{width:'48px',height:'48px'}} color="warning"/>
                             </div>
                       </div>
                     </div>
