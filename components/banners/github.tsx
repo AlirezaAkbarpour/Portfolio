@@ -11,7 +11,6 @@ export default function Github_Ban() {
   useEffect(()=>{
       const width = window.innerWidth
       cart_ref.current?.addEventListener("mousemove",(e)=>{
-        console.log(e.clientX/100,e.clientY)
           if(e.clientX>width/2) {
           gsap.to('.cart',{
               rotateZ:e.clientX/100,

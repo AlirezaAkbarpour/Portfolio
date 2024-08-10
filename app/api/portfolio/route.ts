@@ -1,5 +1,5 @@
 import { Portfolios } from "@/interfaces/portfolios";
-import type { NextApiRequest , NextApiResponse} from "next";
+import type { NextApiRequest} from "next";
 
 const portfolio : Portfolios = 
     {
