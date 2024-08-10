@@ -1,9 +1,20 @@
-import { NextApiRequest,NextApiResponse } from "next";
+import { NextApiRequest } from "next";
+import { Key } from "react";
 
 interface list {
+    id:Key,
+    name:string | undefined | null,
+    description: string | undefined | null,
+    likes: number | null,
+    links: {
+        github: string | null | undefined,
+        main_page : string | null | undefined
+    }
 }
 
-const portfolios : list = [
+interface List extends Array<list>{}
+
+const portfolios : List = [
     {
         id:'2525',
         name:'next js media',

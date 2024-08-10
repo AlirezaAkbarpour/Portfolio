@@ -1,7 +1,6 @@
 import { ArrowForward } from '@mui/icons-material'
 import { Button } from '@mui/material'
 import type { ListPortfolios } from '@/interfaces/portfolioList'
-import { useEffect, useState } from 'react'
 
 export default function ListItemComponent({id,name,links}:ListPortfolios) {
   return (
