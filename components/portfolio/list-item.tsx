@@ -10,7 +10,7 @@ export default function ListItemComponent({id,name,links}:ListPortfolios) {
       <div className='w-2 h-full relative bg-white mr-4'></div>
       <Button color='error' className='w-16 h-16' href={links.main_page}>
         <ArrowForward sx={{width:'52px',height:'48px',color:'white',backgroundColor:'orangered',
-          ':hover': {backgroundColor:'darkslategray'}}} className='text-white rounded-md
+          ':hover': {backgroundColor:'#120f31'}}} className='text-white rounded-md
          bg-orange-500'/>
       </Button>
     </div>

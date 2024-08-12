@@ -27,7 +27,7 @@ export default function Github_Ban() {
       })
       cart_ref.current?.addEventListener("mouseleave",()=>{
         gsap.to('.cart',{
-          rotateY:0,
+          rotateX:0,
           rotateZ:0,
           ease:'power3.out',
           duration:0.5

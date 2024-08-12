@@ -28,35 +28,35 @@ export default function Footer() {
           </div>
           <div className='w-1/3 '>
               <div className='text-footer-light-text mt-6 text-xl'>Pages</div>
-              <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition hover:delay-500 ease-in-out'>
+              <div className='w-24 text-footer-light-text2 mt-4 hover:cursor-pointer text-base font-thin hover:text-white hover:pl-2 transition hover:delay-500 ease-in-out'>
                 <Link href={'/'} >
                       Home Page
                 </Link>
               </div>
-              <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition hover:delay-500 ease-in-out'>
+              <div className='w-24 text-footer-light-text2 mt-4 text-base font-thin hover:cursor-pointer hover:text-white hover:pl-2 transition hover:delay-500 ease-in-out'>
                 <Link href={'/about'} >
                       About Page
                 </Link>
               </div>
-              <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition hover:delay-500 ease-in-out'>
+              <div className='w-24 text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:cursor-pointer hover:pl-2 transition hover:delay-500 ease-in-out'>
                 <Link href={'/works'} >
                       Works Page
                 </Link>
               </div>
           </div>
           <div className='w-1/3 '>
-              <div className='text-footer-light-text mt-6 text-xl'>Follow Me</div>
-              <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition hover:delay-500 ease-in-out'>
+              <div className='w-24 text-footer-light-text mt-6 text-xl'>Follow Me</div>
+              <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:pl-2 transition hover:cursor-pointer hover:delay-500 ease-in-out'>
                 <Link href={'/'} >
                       Twitter
                 </Link>
               </div>
-              <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition hover:delay-500 ease-in-out'>
+              <div className='w-24 text-footer-light-text2 mt-4 text-base font-thin hover:cursor-pointer hover:text-white hover:pl-2 transition hover:delay-500 ease-in-out'>
                 <Link href={'/about'} >
                       Instagram
                 </Link>
               </div>
-              <div className='text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:ml-2 transition hover:delay-500 ease-in-out'>
+              <div className='w-24 text-footer-light-text2 mt-4 text-base font-thin hover:text-white hover:cursor-pointer hover:pl-2 transition hover:delay-500 ease-in-out'>
                 <Link href={'/works'} >
                       LinkedIn
                 </Link>

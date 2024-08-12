@@ -32,6 +32,5 @@ body{
 
 .btn_shadow:hover{
   box-shadow: 0 0 45px rgb(224, 123, 16);
-  border: 2px solid white;
   transition: all 22ms;
 }
