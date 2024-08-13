@@ -34,3 +34,7 @@ body{
   box-shadow: 0 0 45px rgb(224, 123, 16);
   transition: all 22ms;
 }
+a{
+  margin: 0;
+  padding: 0;
+}

@@ -2,6 +2,7 @@
 import { use } from "react"
 import { Button, Divider } from "@mui/material"
 import { Language, Star } from "@mui/icons-material"
+import Link from "next/link"
 const host = 'localhost'
 const port = '3000'
 
@@ -31,8 +32,11 @@ export default function LastPortfolio() {
             <h1 className='w-full h-16 text-3xl px-20 py-4 font-normal'>Last Portfolio</h1>
             <div className="flex justify-center h-full ">
               <div className='w-full mx-20 min-h-[30rem] shadow-lg bg-background-theme my-5 rounded-2xl 
-                hover:bg-orange-300 hover:text-white'
+                hover:bg-orange-300 hover:text-white
+                transition-colors
+                '
               >
+                <Link href={data.portfolio.links.main_page}>
                 <div className='w-full h-16 m-1 flex justify-between items-center'>
                     <h1 className="w-1/2 h-16 p-4 text-4xl ">{data.portfolio.name}</h1>
                     <div className="w-1/2 h-16 flex justify-end px-10">
@@ -56,6 +60,7 @@ export default function LastPortfolio() {
                         <div className="w-[400px] h-[300px] bg-slate-600 rounded-xl"></div>
                       </div>
                 </div>
+            </Link>
             </div>
             </div>
             
