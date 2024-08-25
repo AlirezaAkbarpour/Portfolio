@@ -13,14 +13,14 @@ export default function Github_Ban() {
       cart_ref.current?.addEventListener("mousemove",(e)=>{
           if(e.clientX>width/2) {
           gsap.to('.cart',{
-              rotateZ:e.clientX/100,
-              rotateX:e.clientY/20,
+              rotateX:e.clientY/100,
+              rotateY:e.clientX/20,
               immediateRender:false,
             })
           }else{
             gsap.to('.cart',{
-              rotateZ:-e.clientX/100,
-              rotationX:-e.clientY/20,
+              rotateX:-e.clientY/100,
+              rotateY:-e.clientX/20,
               immediateRender:false,
             })
           }
@@ -28,7 +28,7 @@ export default function Github_Ban() {
       cart_ref.current?.addEventListener("mouseleave",()=>{
         gsap.to('.cart',{
           rotateX:0,
-          rotateZ:0,
+          rotateY:0,
           ease:'power3.out',
           duration:0.5
         })
