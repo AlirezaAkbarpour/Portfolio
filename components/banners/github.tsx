@@ -37,7 +37,7 @@ export default function Github_Ban() {
   return (
     <Link href={'https://github.com'} className='w-full h-full'>
     <div className='cart w-p h-80 bg-white shadow-2xl rounded-2xl mt-10 flex 
-      transition-all ease-in hover:bg-gray-600 hover:text-white hover:cursor-pointer'
+      transition-all ease-in hover:bg-gray-600 hover:text-white hover:cursor-pointer delay-75'
       ref={cart_ref}
       >
         <div className='w-1/2 mx-20 mt-20'>

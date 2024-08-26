@@ -40,13 +40,13 @@ export default function LastPortfolio() {
                 <div className='w-full h-16 m-1 flex justify-between items-center'>
                     <h1 className="w-1/2 h-16 p-4 text-4xl ">{data.portfolio.name}</h1>
                     <div className="w-1/2 h-16 flex justify-end px-10">
-                      <div className="w-36 h-14 bg-white rounded-full shadow-md py-1 flex justify-center items-center">
+                      <div className="w-28 h-12 bg-white rounded-lg mt-2 shadow-md py-1 flex justify-center items-center">
                             <div className="w-1/2 h-full flex items-center">
-                              <p className="w-full text-2xl text-center text-orange-600 font-medium">{data.portfolio.likes}</p>
+                              <p className="w-full text-xl text-center text-orange-600 font-medium">{data.portfolio.likes}</p>
                             </div>
                             <Divider orientation="vertical"/>
                             <div className="w-1/2 h-full flex items-center justify-center">
-                              <Star sx={{width:'48px',height:'48px'}} color="warning"/>
+                              <Star sx={{width:'36px',height:'36px'}} color="warning"/>
                             </div>
                       </div>
                     </div>
