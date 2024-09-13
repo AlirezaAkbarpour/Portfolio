@@ -1,4 +1,3 @@
-import type { NextApiRequest } from "next";
 import { Key } from "react";
 interface list {
     id:Key,
@@ -36,7 +35,7 @@ const portfolios : List = [
     }
 ]
 
-export async function GET(request:NextApiRequest){
+export async function GET(request:Request){
     if (request.method === 'GET'){
         return Response.json({portfolios},
             {status:200}
