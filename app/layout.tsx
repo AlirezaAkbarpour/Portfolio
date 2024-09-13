@@ -33,10 +33,11 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='icon.png' sizes='any'/>
       </head>
-      <body className='max-w-screen-2xl 
+      <body className='w-full max-w-screen-2xl 
       min-h-full bg-background-base 
       container mx-auto
       lg:w-full
+      md:w-full
       '>
         <Navbar/>
         <div className="container min-w-full mx-auto">   

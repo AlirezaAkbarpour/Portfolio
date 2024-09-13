@@ -53,8 +53,8 @@ export default function Home() {
 
     return (
       <Fragment>
-        <div className='w-full h-full bg-background-theme mx-auto container' ref={container}>
-          <div className="w-full h-[40rem] mt-16 flex max-md:flex-row justify-between">
+        <div className='w-full h-full bg-background-theme mx-auto container max-md:w-[768px]' ref={container}>
+          <div className="w-full h-[40rem] mt-16 flex max-md:flex-col-reverse justify-between">
             <div className="title flex mt-20 flex-col py-4 px-24 w-1/2">
               <div className="titleOne w-full font-archivo text-6xl text-icon-blue font-bold mx-4 p-2 max-lg:text-2xl">Hy ! I Am</div>
               <div className="titleTwo w-full font-archivo text-6xl text-icon-blue font-bold mx-4 p-2 max-lg:text-2xl">Alireza Akbarpour</div>
@@ -83,7 +83,10 @@ export default function Home() {
                   <Image src={'/images/icons8-curly-arrow-80.png'} alt='spinner' width={120} height={120} className='arrow relative bottom-10 left-8 scale-125 -rotate-12 '/>
               </div>
             </div>
-            <div className="banner bg-slate-600 w-[640px] h-[420px] mt-24 py-4 px-24 mr-24">
+            <div className="banner  bg-slate-600 lg:w-[640px] lg:h-[420px] mt-24 py-4 px-24 mr-24
+            md:w-64
+            md:h-64
+            ">
   
             </div>
           </div>

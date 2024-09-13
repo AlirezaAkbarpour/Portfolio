@@ -1,6 +1,5 @@
-import { NextApiRequest } from "next";
+import type { NextApiRequest } from "next";
 import { Key } from "react";
-
 interface list {
     id:Key,
     name:string | undefined | null,

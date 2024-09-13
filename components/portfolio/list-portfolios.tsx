@@ -1,7 +1,8 @@
+'use client'
 import { Key, use } from "react";
 import type { ListPortfolios } from "@/interfaces/portfolioList";
 import dynamic from "next/dynamic";
-const ListItem = dynamic(()=> import('./list-item'))
+const ListItem = dynamic(()=> import('./list-item'),{ssr:false})
 
 async function GetList (){
   try{
@@ -29,8 +30,8 @@ export default function ListPortfolioComponent() {
         <ul className='w-full px-20 mt-8'>
            {
               list && 
-             list.portfolios.map((item: { id: Key ; name: string; links: { github: string; main_page: string; }; }) => 
-             <ListItem key={item.id} id={item.id} name={item.name} links={item.links}/>)
+             list.portfolios.map((item: { id: Key ; name: string; links: { github: string; main_page: string; }; }) => <li key={item.id}>
+             <ListItem key={item.id} id={item.id} name={item.name} links={item.links}/></li>)
            }
         </ul>
     </div>

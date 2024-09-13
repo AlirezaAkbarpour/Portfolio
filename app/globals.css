@@ -24,6 +24,7 @@
 
 
 body{
+     width: 100%;
      scrollbar-width: none;
      scroll-behavior: auto;
      overflow-x: hidden;
@@ -40,4 +41,10 @@ a{
 }
 .btn_hover a{
   background: white;
+}
+
+@media (min-width:768px) {
+    body{
+      width: 768px;
+    }
 }
