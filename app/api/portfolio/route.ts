@@ -1,5 +1,5 @@
 import { Portfolios } from "@/interfaces/portfolios";
-import type { NextApiRequest} from "next";
+import type { NextRequest } from "next/server";
 
 const portfolio : Portfolios = 
     {
@@ -14,7 +14,7 @@ const portfolio : Portfolios =
     }
 
 
-export async function GET(request:NextApiRequest) {
+export async function GET(request:NextRequest) {
     if(request.method==="GET"){
         return Response.json({portfolio},{
             status:200,
