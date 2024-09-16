@@ -1,12 +1,10 @@
-'use client'
 import { Key, use } from "react";
-import type { ListPortfolios } from "@/interfaces/portfolioList";
 import dynamic from "next/dynamic";
 const ListItem = dynamic(()=> import('./list-item'),{ssr:false})
 
 async function GetList (){
   try{
-    const res = await fetch('http://localhost:3000/api/portfolio/list',{cache:'no-cache',})
+    const res = await fetch('http://localhost:3000/api/portfolio/list',{cache:'force-cache',})
     if(!res.ok){
       throw new Error("Failed Fetch")
     }
