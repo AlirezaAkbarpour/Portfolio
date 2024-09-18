@@ -1,4 +1,4 @@
-import { Portfolios } from "@/interfaces/portfolios";
+import { Portfolios } from "@/types/portfolios";
 import type { NextRequest } from "next/server";
 
 const portfolio : Portfolios = 

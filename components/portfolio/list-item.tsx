@@ -1,7 +1,7 @@
 'use client'
 import { ArrowForward } from '@mui/icons-material'
 import { Button } from '@mui/material'
-import type { ListPortfolios } from '@/interfaces/portfolioList'
+import type { ListPortfolios } from '@/types/portfolioList'
 import Link from 'next/link'
 
 export default function ListItemComponent({id,name,links}:ListPortfolios) {
