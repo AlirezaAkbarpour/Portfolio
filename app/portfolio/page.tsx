@@ -2,13 +2,16 @@
 import Github_Ban from '@/components/banners/github'
 import LinerStar from '@/components/svgs/linerStar'
 import { useGSAP } from '@gsap/react'
-import { Instagram, LinkedIn, X } from '@mui/icons-material'
+import { DynamicFeedTwoTone, Instagram, LinkedIn, X } from '@mui/icons-material'
 import gsap from 'gsap'
 import {useRef } from 'react'
 import Link from 'next/link'
 import { CSSTransition } from 'react-transition-group'
-import LastPortfolio from '@/components/portfolio/last-item'
-import ListPortfolioComponent from '@/components/portfolio/list-portfolios'
+import dynamic from 'next/dynamic'
+
+const ListPortfolio = dynamic(()=> import('@/components/portfolio/list-portfolios'))
+const LastPortfolio = dynamic(()=> import('@/components/portfolio/last-item'))
+
 
 export default function Page() {
   const container : React.RefObject<HTMLDivElement> = useRef(null)
@@ -73,10 +76,10 @@ export default function Page() {
               </div></Link>
         </div>
         <div className='page w-full'>
-          {/*<LastPortfolio/>*/}
+          <LastPortfolio/>
         </div>
         <div className='page w-full '>
-          {/*<ListPortfolioComponent/>*/}
+         {/* <ListPortfolio/>*/}
         </div>
     </div>
   )

@@ -1,7 +1,7 @@
-import { Portfolios } from "@/types/portfolios";
+import { Portfolio } from "@/types/portfolios";
 import type { NextRequest } from "next/server";
 
-const portfolio : Portfolios = 
+const portfolio : Portfolio = 
     {
         id:2525,
         name:'next js media',
@@ -16,7 +16,7 @@ const portfolio : Portfolios =
 
 export async function GET(request:NextRequest) {
     if(request.method==="GET"){
-        return Response.json({portfolio},{
+        return Response.json(portfolio,{
             status:200,
         })
     }

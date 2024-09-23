@@ -1,32 +1,31 @@
-'use client'
-import { use } from "react"
-import { Button, Divider } from "@mui/material"
-import { Language, Star } from "@mui/icons-material"
+import {Divider } from "@mui/material"
+import {Star } from "@mui/icons-material"
 import Link from "next/link"
-const host = 'localhost'
-const port = '3000'
-
-async function getData(){
-  try{
-    const res = await fetch(`http://${host}:${port}/api/portfolio`,{cache:'no-cache',method:'GET'})
-      if(!res.ok){
-       throw new Error('Failed Fetch')
-      }
-      const data = res.json()
-     return data;
-  }catch(error){
-    new Error("error fetch function")
-  }
-  
-}
-
-const PromiseStake: Promise<any> = getData()
+import { useEffect, useState } from "react"
+import Loading from "../loading"
+import type { Portfolio } from "@/types/portfolios"
 
 export default function LastPortfolio() {
-  const data = use(PromiseStake)
-  if(!data) {
-    throw new Error("data catch error")
-  }
+  const [portfolio,setPortfolio] = useState<Portfolio>()
+  const [isLoading, setLoading] = useState(true)
+
+  useEffect(()=>{
+    const fetchData = async ()=>{
+      await fetch("http://localhost:3000/api/portfolio",{cache:"no-store"})
+      .then((res)=> res.json())
+      .then((data)=>{ 
+        setPortfolio(data)
+        setLoading(false)
+      }
+    )
+    }
+    fetchData()
+  },[])
+
+  console.log(portfolio)
+  if(isLoading) return(<Loading/>)
+  if(!portfolio) return(<div>Nothing to show!</div>);
+
   return (
     <div className='w-full h-full bg-white py-2'>
             <h1 className='w-full h-16 text-3xl px-20 py-4 font-normal'>Last Portfolio</h1>
@@ -36,13 +35,13 @@ export default function LastPortfolio() {
                 transition-colors
                 '
               >
-                <Link href={data.portfolio.links.main_page}>
+                <Link href={"/portfolios/"+portfolio.id}>
                 <div className='w-full h-16 m-1 flex justify-between items-center'>
-                    <h1 className="w-1/2 h-16 p-4 text-4xl ">{data.portfolio.name}</h1>
+                    <h1 className="w-1/2 h-16 p-4 text-4xl ">{portfolio.name}</h1>
                     <div className="w-1/2 h-16 flex justify-end px-10">
                       <div className="w-28 h-12 bg-white rounded-lg mt-2 shadow-md py-1 flex justify-center items-center">
                             <div className="w-1/2 h-full flex items-center">
-                              <p className="w-full text-xl text-center text-orange-600 font-medium">{data.portfolio.likes}</p>
+                              <p className="w-full text-xl text-center text-orange-600 font-medium">{portfolio.likes}</p>
                             </div>
                             <Divider orientation="vertical"/>
                             <div className="w-1/2 h-full flex items-center justify-center">
@@ -54,7 +53,7 @@ export default function LastPortfolio() {
                 <Divider/>
                 <div className="w-full p-4 flex justify-around">
                       <div className="w-1/2 text-2xl font-normal first-letter:uppercase p-2 text-slate-600">
-                        {data.portfolio.description}
+                        {portfolio.description}
                       </div>
                       <div className="w-1/2 p-4 flex justify-end items-start">
                         <div className="w-[400px] h-[300px] bg-slate-600 rounded-xl"></div>
@@ -66,4 +65,5 @@ export default function LastPortfolio() {
             
     </div>
 )}
+
 
