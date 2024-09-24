@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 export default function ListItemComponent({id,name,links}:ListPortfolios) {
   return (
-    <li key={id}>
-    <Link href={links.main_page} className='item-list my-6 w-full h-32 flex 
+    <li>
+    <Link href={"portfolios/"+id} className='item-list my-6 w-full h-32 flex 
     rounded-lg shadow-md bg-background-theme items-center px-2
     transition-colors
     hover:bg-orange-400 hover:text-white 

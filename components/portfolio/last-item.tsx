@@ -22,7 +22,6 @@ export default function LastPortfolio() {
     fetchData()
   },[])
 
-  console.log(portfolio)
   if(isLoading) return(<Loading/>)
   if(!portfolio) return(<div>Nothing to show!</div>);
 

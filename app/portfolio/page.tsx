@@ -79,7 +79,7 @@ export default function Page() {
           <LastPortfolio/>
         </div>
         <div className='page w-full '>
-         {/* <ListPortfolio/>*/}
+         <ListPortfolio/>
         </div>
     </div>
   )

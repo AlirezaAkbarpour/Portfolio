@@ -2,18 +2,18 @@ import type { NextRequest } from "next/server";
 import { Key } from "react";
 interface list {
     id:Key,
-    name:string | undefined | null,
-    description: string | undefined | null,
-    likes: number | null,
+    name:string,
+    description: string ,
+    likes: number ,
     links: {
-        github: string | null | undefined,
-        main_page : string | null | undefined
+        github: string ,
+        main_page : string 
     }
 }
 
-interface List extends Array<list>{}
+export interface PortfolioList extends Array<list>{}
 
-const portfolios : List = [
+const portfolios : PortfolioList = [
     {
         id:'2525',
         name:'next js media',
