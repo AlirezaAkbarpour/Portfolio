@@ -11,7 +11,7 @@ export default function ListPortfolioComponent() {
 
   useEffect(()=>{
     const fetchData = async ()=>{
-      await fetch("http://localhost:3000/api/portfolio/list",{cache:'no-store'})
+      await fetch("http://portfolio-lemon-nu-98.vercel.app/api/portfolio/list",{cache:'no-store'})
       .then((res)=> res.json())
       .then((data)=>{
         setList(data.portfolios)
