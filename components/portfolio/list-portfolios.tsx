@@ -11,7 +11,7 @@ export default function ListPortfolioComponent() {
 
   useEffect(()=>{
     const fetchData = async ()=>{
-      await fetch("http://portfolio-lemon-nu-98.vercel.app/api/portfolio/list",{cache:'no-store'})
+      await fetch("https://portfolio-lemon-nu-98.vercel.app/api/portfolio/list",{cache:'no-store'})
       .then((res)=> res.json())
       .then((data)=>{
         setList(data.portfolios)
@@ -21,7 +21,7 @@ export default function ListPortfolioComponent() {
     fetchData() 
   },[])
  
-  if(isLoading) return <Loading />
+  if(isLoading) return <div className="absolute z-50"> <Loading /> </div>
   if(!list) return <div className="text-lg text-black">No List to show!!</div>
 
   return (

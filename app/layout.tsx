@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
 import { Suspense } from 'react'
 import { lazy } from 'react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const Loading = lazy(()=>import('@/components/loading'))
 const archivo = Archivo({ subsets: ['latin'] })
@@ -30,6 +31,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={archivo.className}>
+      <SpeedInsights/>
       <head>
         <link rel='icon' href='icon.png' sizes='any'/>
       </head>

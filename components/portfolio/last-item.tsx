@@ -11,7 +11,7 @@ export default function LastPortfolio() {
 
   useEffect(()=>{
     const fetchData = async ()=>{
-      await fetch("http://portfolio-lemon-nu-98.vercel.app/api/portfolio",{cache:"no-store"})
+      await fetch("https://portfolio-lemon-nu-98.vercel.app/api/portfolio",{cache:"no-store"})
       .then((res)=> res.json())
       .then((data)=>{ 
         setPortfolio(data)
@@ -22,7 +22,7 @@ export default function LastPortfolio() {
     fetchData()
   },[])
 
-  if(isLoading) return(<Loading/>)
+  if(isLoading) return(<div className="absolute z-50"><Loading/></div>)
   if(!portfolio) return(<div>Nothing to show!</div>);
 
   return (
