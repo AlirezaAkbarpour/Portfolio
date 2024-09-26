@@ -13,13 +13,11 @@ export default function Github_Ban() {
       cart_ref.current?.addEventListener("mousemove",(e)=>{
           if(e.clientX>width/2) {
           gsap.to('.cart',{
-              rotateX:e.clientY/100,
               rotateY:e.clientX/20,
               immediateRender:false,
             })
           }else{
             gsap.to('.cart',{
-              rotateX:-e.clientY/100,
               rotateY:-e.clientX/20,
               immediateRender:false,
             })
@@ -35,8 +33,8 @@ export default function Github_Ban() {
       })
   })
   return (
-    <Link href={'https://github.com'} className='w-full h-full'>
-    <div className='cart w-p h-80 bg-white shadow-2xl rounded-2xl mt-10 flex 
+    <Link href={'https://github.com'} className='cart w-full h-full'>
+    <div className='w-p h-80 bg-white shadow-2xl rounded-2xl mt-10 flex 
       transition-all ease-in hover:bg-gray-600 hover:text-white hover:cursor-pointer delay-75'
       ref={cart_ref}
       >

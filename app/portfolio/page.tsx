@@ -9,8 +9,8 @@ import Link from 'next/link'
 import { CSSTransition } from 'react-transition-group'
 import dynamic from 'next/dynamic'
 
-const ListPortfolio = dynamic(()=> import('@/components/portfolio/list-portfolios'))
-const LastPortfolio = dynamic(()=> import('@/components/portfolio/last-item'))
+const ListPortfolio = dynamic(()=> import('@/components/portfolio/list-portfolios'),{ssr:false})
+const LastPortfolio = dynamic(()=> import('@/components/portfolio/last-item'),{ssr:false})
 
 
 export default function Page() {
@@ -29,7 +29,7 @@ export default function Page() {
   },{scope:container})
 
   return (
-    <div ref={container} className='w-full mt-10 bg-background-theme z-0' >  
+    <main ref={container} className='w-full mt-10 bg-background-theme z-0' suppressHydrationWarning={true}>  
         <CSSTransition in={true} timeout={3000} classNames='page' unmountOnExit>
         <div className='page flex justify-center '>
           <div className='w-full relative z-10'>
@@ -81,6 +81,6 @@ export default function Page() {
         <div className='page w-full '>
          <ListPortfolio/>
         </div>
-    </div>
+    </main>
   )
 }

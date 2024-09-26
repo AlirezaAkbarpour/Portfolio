@@ -22,17 +22,16 @@ export default function ListPortfolioComponent() {
     fetchData() 
   },[])
  
-  if(isLoading) return <div className="absolute z-50 left-0 top-0"> <Loading /> </div>
-  if(!list) return <div className="text-lg text-black">No List to show!!</div>
 
   return (
     <div className='w-full h-full bg-white py-8'>
         <h1 className='w-full h-16 py-4 px-20 text-4xl font-semibold'>List Portfolios</h1>
         <ul className='w-full px-20 mt-8'>
            {
-              list && 
+              !isLoading? list &&
              list.map((item,index) =>
              <ListItem key={index} id={item.id} name={item.name} links={item.links}/>)
+             : <><div className="text-xl text-black w-full text-center font-bold bg-yellow-400 py-4">No List to show!!</div></>
            }
         </ul>
     </div>

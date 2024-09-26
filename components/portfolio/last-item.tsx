@@ -23,10 +23,8 @@ export default function LastPortfolio() {
     fetchData()
   },[])
 
-  if(isLoading) return(<div className="absolute z-50 left-0 top-0"><Loading/></div>)
-  if(!portfolio) return(<div>Nothing to show!</div>);
-
-  return (
+  return ( <>
+    {!isLoading ? portfolio &&
     <div className='w-full h-full bg-white py-2'>
             <h1 className='w-full h-16 text-3xl px-20 py-4 font-normal'>Last Portfolio</h1>
             <div className="flex justify-center h-full ">
@@ -61,9 +59,12 @@ export default function LastPortfolio() {
                 </div>
             </Link>
             </div>
-            </div>
-            
+            </div>   
     </div>
+    : <>
+      <div className="text-xl text-black w-full text-center py-4 bg-yellow-200 font-bold">Nothing to show!</div>
+    </>}
+    </>
 )}
 
 
