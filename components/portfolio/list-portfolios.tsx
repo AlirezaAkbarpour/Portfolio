@@ -1,3 +1,4 @@
+"use client"
 import {useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { PortfolioList } from "@/app/api/portfolio/list/route";
@@ -21,7 +22,7 @@ export default function ListPortfolioComponent() {
     fetchData() 
   },[])
  
-  if(isLoading) return <div className="absolute z-50"> <Loading /> </div>
+  if(isLoading) return <div className="absolute z-50 left-0 top-0"> <Loading /> </div>
   if(!list) return <div className="text-lg text-black">No List to show!!</div>
 
   return (

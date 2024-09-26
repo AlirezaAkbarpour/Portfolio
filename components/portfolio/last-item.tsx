@@ -1,3 +1,4 @@
+"use client"
 import {Divider } from "@mui/material"
 import {Star } from "@mui/icons-material"
 import Link from "next/link"
@@ -22,7 +23,7 @@ export default function LastPortfolio() {
     fetchData()
   },[])
 
-  if(isLoading) return(<div className="absolute z-50"><Loading/></div>)
+  if(isLoading) return(<div className="absolute z-50 left-0 top-0"><Loading/></div>)
   if(!portfolio) return(<div>Nothing to show!</div>);
 
   return (
