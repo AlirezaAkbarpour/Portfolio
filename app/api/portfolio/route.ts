@@ -15,6 +15,7 @@ const portfolio : Portfolio =
 
 
 export async function GET(request:NextRequest) {
+
     if(request.method==="GET"){
         return Response.json(portfolio,{
             status:200,
