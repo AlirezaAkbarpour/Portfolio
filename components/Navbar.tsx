@@ -6,6 +6,9 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathName: string = usePathname()
+
+  if(pathName==="/dashboard") return ;
+
   return (
     <nav className="w-full max-w-full h-16 flex justify-around 
     align-middle fixed top-0 left-0 z-10 bg-background-theme

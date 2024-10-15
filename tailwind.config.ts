@@ -20,6 +20,7 @@ const config: Config = {
         'footer-color-black':"#120F31",
         'footer-light-text':'#8D8D8D',
         'footer-light-text2':'#D9D9D9',
+        'dashboard-orange':'#eb734f'
       },
       fontFamily:{
         'archivo':['archivo'],
