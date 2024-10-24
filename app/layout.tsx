@@ -41,6 +41,7 @@ export default function RootLayout({
       lg:w-full
       md:w-full
       '>
+        <div id='not'></div>
         <Navbar/>
         <div className="container min-w-full mx-auto">   
           <div className='w-full min-h-full flex justify-center'>
@@ -50,7 +51,6 @@ export default function RootLayout({
           </div>
         </div>
         <Footer/>
-        <div id='not'></div>
       </body>
     </html>
   )

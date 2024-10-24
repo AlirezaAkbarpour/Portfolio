@@ -35,7 +35,7 @@ export default function ContactPortal({isOpen,OnClose}:Props){
     if(!isOpen) return null;
 
     return createPortal(
-        <div className='w-full h-full flex justify-center absolute z-50 top-0 left-0'>
+        <main className='w-full h-full flex justify-center absolute z-50 top-0 left-0'>
             <div className='portal w-[640px] h-[360px] bg-white opacity-0 rounded-lg p-2 fixed top-1/4 shadow-2xl' ref={layout}>
                     <div className='w-full h-16 flex justify-between p-4'>
                             <h1 className='text-4xl font-archivo font-semibold text-footer-color-black'>Contact Me</h1>
@@ -72,6 +72,6 @@ export default function ContactPortal({isOpen,OnClose}:Props){
                     </div>
                     </div>
             </div>
-        </div>
+        </main>
     ,document.getElementById("not") as HTMLElement)
 }

@@ -26,7 +26,7 @@ export default function DashboardPage() {
                 </div>
               </div>
               <hr className="mx-10"/>
-              <div className="mx-8 mt-8">
+              <div className="mx-8 mt-6">
                   <PortfolioMange/>
               </div>
             </div>
