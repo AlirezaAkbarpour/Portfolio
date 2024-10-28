@@ -1,0 +1,29 @@
+$activeColor: #eb734f; //orange
+$darkenColor: darken($activeColor, 20%);
+
+
+.squaredOne {
+  .inputbox{
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    &::after{
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: #eb734f;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    border: 2px $activeColor solid;
+    input[type=checkbox]{
+      width: 28px;
+      height: 28px;
+      scale: 2;
+      visibility: hidden;
+      accent-color: $activeColor;
+    }
+  }
+}
+  
