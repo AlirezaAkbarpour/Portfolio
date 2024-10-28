@@ -70,7 +70,7 @@ export default function ProjectForm() {
                   <div className="w-full flex justify-center">
                       <h1 className="text-xl font-medium text-gray-800 ">Upload Project Image:</h1>
                   </div>
-                  <div className="w-full h-52 ring-1 ring-gray-700 rounded-lg mt-6 flex flex-col justify-center items-center ">
+                  <div className="w-full h-48 ring-1 ring-gray-700 rounded-lg mt-6 flex flex-col justify-center items-center ">
                     <ImageIcon alt='image'  fontSize="large"/>
                     <input type="file"/>
                   </div>

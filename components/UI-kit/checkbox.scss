@@ -9,27 +9,18 @@ $darkenColor: darken($activeColor, 20%);
     border-radius: 4px;
     border: 2px $activeColor solid;
     cursor: pointer;
-    transition: 2ms ;
+    transition: 20ms ;
+    &:hover{
+        box-shadow: inset 0 0 5px 5px $activeColor;
+        opacity: 0.7;
+      }
     .inputbutton{
       width: 24px;
       height: 24px;
       background: $activeColor;
       box-shadow: inset 0 0 5px 5px #eb734f ;
       border-radius: 2px;
-      &:hover{
-        background: $darkenColor;
-        opacity: 0.7;
-      }
-    }
-    input[type=checkbox]{
-      width: 28px;
-      height: 28px;
-      scale: 2;
-      visibility: hidden;
-      accent-color: $activeColor;
-      &:checked + .inputbutton{
-          background: #fff;
-      }
+      
     }
   }
 }
