@@ -7,22 +7,29 @@ $darkenColor: darken($activeColor, 20%);
     width: 32px;
     height: 32px;
     border-radius: 4px;
-    &::after{
-      content: "";
+    border: 2px $activeColor solid;
+    cursor: pointer;
+    transition: 2ms ;
+    .inputbutton{
       width: 24px;
       height: 24px;
-      background: #eb734f;
-      position: absolute;
-      top: 0;
-      left: 0;
+      background: $activeColor;
+      box-shadow: inset 0 0 5px 5px #eb734f ;
+      border-radius: 2px;
+      &:hover{
+        background: $darkenColor;
+        opacity: 0.7;
+      }
     }
-    border: 2px $activeColor solid;
     input[type=checkbox]{
       width: 28px;
       height: 28px;
       scale: 2;
       visibility: hidden;
       accent-color: $activeColor;
+      &:checked + .inputbutton{
+          background: #fff;
+      }
     }
   }
 }

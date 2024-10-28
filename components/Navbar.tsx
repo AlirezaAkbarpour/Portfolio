@@ -19,7 +19,7 @@ export default function Navbar() {
           font-archivo
           hover:animate-pulse
           "> 
-            A.K.A 
+            A.K.A
             <Circle/> 
           </div>
           <div id="nav" className="w-1/2 p-2 h-16 invisible hidden md:visible md:inline">
