@@ -4,6 +4,7 @@ import { createPortal } from "react-dom"
 import Add_Icon from "./svgs/add_Icon"
 import { Image as ImageIcon }  from "@mui/icons-material"
 import CheckBox from "./UI-kit/checkbox"
+import './styles/projectform.css'
 
 export default function ProjectForm() {
   const [isClient,setClient] = useState(false)
@@ -27,7 +28,7 @@ export default function ProjectForm() {
                 <div className="w-4 h-4 rounded-full bg-blue-500 mx-1"></div>
               </div>
                 <h1 className="text-2xl h-10 font-medium text-zinc-600 mx-8">Setting Project</h1>
-              <div className="w-full h-5/6 overflow-y-scroll flex justify-between">
+              <div className="scroll-layout w-full h-5/6 overflow-y-scroll flex justify-between">
                 <div className="w-1/2 mx-8 pr-24 ">
                   <h2 className="text-xl font-normal text-zinc-600 mt-6 mx-2 flex items-center">id: <p className="text-zinc-400 px-2 text-xl">22a5255</p></h2>
                   <h2 className="text-xl font-medium text-zinc-600 mt-6 mx-2">Name Project:</h2>
@@ -70,9 +71,12 @@ export default function ProjectForm() {
                   <div className="w-full flex justify-center">
                       <h1 className="text-xl font-medium text-gray-800 ">Upload Project Image:</h1>
                   </div>
-                  <div className="w-full h-48 ring-1 ring-gray-700 rounded-lg mt-6 flex flex-col justify-center items-center ">
-                    <ImageIcon alt='image'  fontSize="large"/>
-                    <input type="file"/>
+                  <div className="pickFile w-full h-48 ring-1 ring-gray-700 rounded-lg mt-6 flex flex-col justify-center items-center ">
+                    <label htmlFor="file-input" className="w-full h-full flex flex-col justify-center items-center ">
+                      <ImageIcon alt='image' fontSize="large" className="scale-150"/>
+                      <p className="py-1 px-2 mt-8 text-lg font-medium rounded-lg bg-zinc-400 text-zinc-800">Choose Image</p>
+                    </label>
+                    <input type="file" id="file-input" name="file-input"/>
                   </div>
                 </div>
               </div>

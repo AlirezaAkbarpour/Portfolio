@@ -1,0 +1,16 @@
+.scroll-layout{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.pickFile{
+    
+    input[type=file]{
+        //visibility: hidden;
+        overflow: hidden;
+        z-index: -1;
+        position: absolute;
+    }
+}
