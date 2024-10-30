@@ -1,4 +1,5 @@
 .scroll-layout{
+    height: 80%;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
     &::-webkit-scrollbar{
@@ -6,9 +7,10 @@
     }
 }
 .pickFile{
-    
     input[type=file]{
         //visibility: hidden;
+        width: .1px;
+        height: .1px;
         overflow: hidden;
         z-index: -1;
         position: absolute;
