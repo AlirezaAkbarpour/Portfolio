@@ -6,14 +6,14 @@ import CheckBox from "./UI-kit/checkbox"
 import './styles/projectform.css'
 import NewLink from "./UI-kit/NewLink"
 
-export default function ProjectForm() {
+export default function ProjectForm({setShow}:any) {
   const [isClient,setClient] = useState(false)
   const [children,setChildren] = useState<React.ReactNode[]>([])
-
+  
 
 
   const clickHandler = ()=>{
-    setClient(false)
+    setShow(false)
   }
 
   const addLinkHandler = ()=>{
@@ -39,11 +39,16 @@ export default function ProjectForm() {
               
               <div className="scroll-layout w-full h-3/4 overflow-y-scroll flex justify-between">
                 <div className="w-1/2 mx-8 pr-24 ">
-                  <h2 className="text-xl font-normal text-zinc-600 mt-6 mx-2 flex items-center">id: <p className="text-zinc-400 px-2 text-xl">22a5255</p></h2>
+                  <h2 className="text-xl font-normal text-zinc-600 mt-6 mx-2 flex items-center">id:
+                    {/* project id */} 
+                    <p className="text-zinc-400 px-2 text-xl">22a5255</p>
+                  </h2>
                   <h2 className="text-xl font-medium text-zinc-600 mt-6 mx-2">Name Project:</h2>
-                  <input type="text" placeholder="name" className="w-full h-10 ml-6 my-4 px-2 text-lg font-light ring-1 ring-zinc-400 rounded-md"/>
+                  {/* name ref */}
+                    <input type="text" placeholder="name" className="w-full h-10 ml-6 my-4 px-2 text-lg font-light ring-1 ring-zinc-400 rounded-md"/>
                   <h2 className="text-xl font-medium text-zinc-600 mt-4 mx-2">Description Project:</h2>
-                  <textarea placeholder="information about project" className="w-full overflow-y-scroll min-h-44 max-h-80 
+                  {/* description ref */} 
+                    <textarea placeholder="information about project" className="w-full overflow-y-scroll min-h-44 max-h-80 
                   ml-6 my-4 py-2 px-2 text-lg font-light ring-1 ring-zinc-400 rounded-md"/>
                   <div className="w-full">
                     <h2 className="text-xl font-medium mx-2 mt-4 text-zinc-600">Feedback Options</h2>
@@ -66,15 +71,17 @@ export default function ProjectForm() {
                   <h1 className="text-2xl text-gray-800 font-medium mt-6">Add Links</h1>
                   <div className="flex mt-6 ml-4">
                     <label htmlFor="site" className="w-28 text-lg font-normal text-zinc-600">Demo Site:</label>
+                    {/* link 0 */}
                     <input id="site" name="site" type="text" placeholder="https://simple.com" className="w-80 h-8 mx-4 font-normal rounded-md ring-1 p-1 ring-zinc-400 text-zinc-600"/>
                   </div>
                   <div className="flex mt-6 ml-4">
                     <label htmlFor="github" className="w-28 text-start text-lg font-normal text-zinc-600">Github Page:</label>
+                    {/* link 1*/}
                     <input name="github" id="github" type="text" placeholder="https://simple.com" className="w-80 font-normal h-8 mx-4 rounded-md ring-1 p-1 ring-zinc-400 text-zinc-600"/>
                   </div>
                   {children}
-                  <div className="w-full flex justify-center ml-4">
-                    <button onClick={addLinkHandler} className="w-full text-lg ml-2 mr-8 px-4 rounded-md  my-8 hover:bg-orange-400 bg-dashboard-orange flex justify-center">
+                  <div className="w-full flex justify-center mr-2">
+                    <button onClick={addLinkHandler} className="w-full text-lg ml-2 mr-4 px-4 rounded-md  my-8 hover:bg-orange-400 bg-dashboard-orange flex justify-center">
                       <h1 className="text-white flex justify-center items-center">Add Link Addition <Add_Icon/> </h1>
                     </button>
                   </div>

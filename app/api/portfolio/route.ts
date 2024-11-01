@@ -1,24 +1,13 @@
+import dbConnect from "@/lib/db";
 import { Portfolio } from "@/types/portfolios";
-import type { NextRequest } from "next/server";
-
-const portfolio : Portfolio = 
-    {
-        id:2525,
-        name:'next js media',
-        description:'nextjs media app that you get ability to play music and sounds with lyric ',
-        likes:12.5,
-        links:{
-            github:'https://hithyb.com/',
-            main_page:'/portfolio/'
-        }
-    }
+import { NextApiResponse ,NextApiRequest } from "next";
 
 
-export async function GET(request:NextRequest) {
+export async function handler(req:NextApiRequest,res:NextApiResponse) {
+    const {method} = req;
+    await dbConnect;
+    switch(method){
+        case "GET":
 
-    if(request.method==="GET"){
-        return Response.json(portfolio,{
-            status:200,
-        })
     }
 };

@@ -1,14 +1,28 @@
 "use client"
-import { ReactEventHandler, useState } from "react"
-import PortfolioMange from "./portfolio"
+import { ReactEventHandler, useEffect, useLayoutEffect, useState } from "react"
+import PortfolioMange from "./components/portfolio"
 
 export default function DashboardPage() {
   //navigation algorithm 
-  const [currentPath,setCurrentPath] = useState<string>("")
+  const [currentPath,setCurrentPath] = useState<string>("portfolio")
 
-  const clickHandler = (e:ReactEventHandler)=>{
-    console.log(e)
+  const clickHandler = (path:string)=>{
+    setCurrentPath(path)
   }
+
+  const ComponentSwitcher = ()=>{
+    switch(currentPath){
+      case "portfolio": return <PortfolioMange/>;
+      case "blogs": return null;
+      case "works": return null;
+      case "messages": return <h1>Hello , Ali</h1>;
+      default: return <PortfolioMange/>
+    }
+  }
+
+  useLayoutEffect(()=>{
+    if(currentPath==="") setCurrentPath("portfolio")
+  },[currentPath])
 
   return (
     <div className="w-full h-screen bg-dashboard-orange flex items-center">
@@ -19,15 +33,15 @@ export default function DashboardPage() {
                 </div>
                 <div className="flex justify-end text-white">
                   <div className="p-2 mx-4 font-medium border-b-4 border-white cursor-pointer"
-                   onClick={e=>clickHandler} >Portfolios</div>
-                  <div className="p-2 mx-4 font-medium cursor-pointer">Blogs</div>
-                  <div className="p-2 mx-4 font-medium cursor-pointer">Works</div>
-                  <div className="p-2 mx-4 font-medium cursor-pointer">Messages</div>
+                   onClick={()=>clickHandler("portfolio")} >Portfolios</div>
+                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler("blogs")}>Blogs</div>
+                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=> clickHandler("works")}>Works</div>
+                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler("messages")}>Messages</div>
                 </div>
               </div>
               <hr className="mx-10"/>
               <div className="mx-8 mt-6">
-                  <PortfolioMange/>
+                  <ComponentSwitcher/>
               </div>
             </div>
     </div>
