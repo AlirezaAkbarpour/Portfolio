@@ -14,7 +14,7 @@ export default function PortfolioMange() {
               <input className="w-full h-full rounded-md px-12
               text-xl font-extralight focus:ring-white focus:ring-1" placeholder="Edit And Add New Projects" disabled/>
               <div className='w-8 h-8 flex justify-center items-center m-2 
-        hover:cursor-pointer absolute rounded-full hover:bg-orange-300 transition-all hover:first:bg-white' onClick={()=>setShow(true)}>
+                hover:cursor-pointer absolute rounded-full hover:bg-orange-300 transition-all hover:first:bg-white' onClick={()=>setShow(true)}>
                 <AddSVG />
               </div>
             </div>
