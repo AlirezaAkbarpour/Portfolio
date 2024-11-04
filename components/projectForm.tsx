@@ -41,7 +41,7 @@ export default function ProjectForm({setShow}:any) {
                 <div className="w-1/2 mx-8 pr-24 ">
                   <h2 className="text-xl font-normal text-zinc-600 mt-6 mx-2 flex items-center">id:
                     {/* project id */} 
-                    <p className="text-zinc-400 px-2 text-xl">22a5255</p>
+                    <p className="text-zinc-400 px-2 text-xl"></p>
                   </h2>
                   <h2 className="text-xl font-medium text-zinc-600 mt-6 mx-2">Name Project:</h2>
                   {/* name ref */}

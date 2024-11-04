@@ -1,0 +1,18 @@
+import Image from "next/image";
+
+export default function ProjectItem() {
+  return (
+    <section className="w-52 h-72 bg-white rounded-xl">
+        <div className="w-full h-8 py-2 text-zinc-500 flex justify-end px-2">Edit</div>
+        <div className="w-full h-44 flex justify-center ">
+        </div>
+        <div className="w-full">
+            <h1 className="text-2xl h-10 text-black font-semibold px-2">Project 01</h1>
+            <div className="w-full flex justify-between px-2 text-zinc-600 font-medium">
+                <p className="text-sm">Last Update :</p>
+                <data className="text-sm">2022/01/01</data>
+            </div>
+        </div>
+    </section>
+  )
+}

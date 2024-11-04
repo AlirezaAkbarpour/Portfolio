@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import AddSVG from '../add_shape.svg'
 import ProjectForm from '@/components/projectForm'
+import ProjectItem from './projectItem'
 
 
 export default function PortfolioMange() {  
@@ -9,7 +10,7 @@ export default function PortfolioMange() {
     const [show,setShow] = useState(false)
     return (
     <div className="w-full px-10">
-            <h1 className="text-3xl font-semibold text-white my-1">{title}</h1>
+            <h1 className="text-3xl font-semibold text-white my-2 py-2">{title}</h1>
             <div className='w-full bg-white h-14 my-6 flex justify-between items-center rounded-md'>
               <input className="w-full h-full rounded-md px-12
               text-xl font-extralight focus:ring-white focus:ring-1" placeholder="Edit And Add New Projects" disabled/>
@@ -19,6 +20,14 @@ export default function PortfolioMange() {
               </div>
             </div>
            { show?<ProjectForm setShow={setShow}/>:null}
+           <div className='w-full min-h-80
+            grid grid-cols-4 gap-24 py-4 justify-items-start mx-6 mt-16'>
+                <ProjectItem/>
+                <ProjectItem/>
+                <ProjectItem/>
+                <ProjectItem/>
+                <ProjectItem/>
+           </div>
     </div>
   )
 }

@@ -26,8 +26,8 @@ export default function DashboardPage() {
   },[currentPath])
 
   return (
-    <div className="w-full h-screen bg-dashboard-orange flex items-center">
-            <div className="w-full h-full mt-4">
+    <div className="w-full min-h-[50rem] bg-dashboard-orange flex items-center">
+            <div className="w-full h-full mt-2">
               <div className="text-xl pl-4 flex justify-between mx-12">
                 <div className="">
                   <div className="p-2 font-semibold text-white opacity-70">Dashboard</div>
@@ -40,8 +40,8 @@ export default function DashboardPage() {
                   <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=> clickHandler("w_orks")}>Works</div>
                   <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler("m_essages")}>Messages</div>    
                 </div>
-                <div className="w-full h-1 flex justify-end mx-6 px-6">
-                  <div className="w-28 h-full bg-white"></div>
+                <div className="w-1/4 h-1 flex justify-end px-3 mx-2">
+                  <div className="w-24 h-full bg-white"></div>
                 </div>
                 </div>
                 
