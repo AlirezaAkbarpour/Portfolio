@@ -1,5 +1,5 @@
 "use client"
-import { ReactEventHandler, Suspense, useEffect, useLayoutEffect, useState } from "react"
+import { Suspense, useLayoutEffect, useState } from "react"
 import PortfolioMange from "./components/portfolio"
 import Loading from "@/components/loading"
 
@@ -9,6 +9,15 @@ export default function DashboardPage() {
 
   const clickHandler = (path:string)=>{
     setCurrentPath(path)
+  }
+
+  const navbarAnimate = ()=>{
+    switch(currentPath){
+      case "p_ortfolio": return 'w-1/4';
+      case "b_logs": return 'w-2/4';
+      case "w_orks": return 'w-3/4';
+      case "m_essages": return 'w-full'
+    }
   }
 
   const ComponentSwitcher = ()=>{
@@ -40,7 +49,7 @@ export default function DashboardPage() {
                   <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=> clickHandler("w_orks")}>Works</div>
                   <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler("m_essages")}>Messages</div>    
                 </div>
-                <div className="w-1/4 h-1 flex justify-end px-3 mx-2">
+                <div className={ navbarAnimate() + " h-1 flex justify-end px-3 mx-2 transition-all delay-75"}>
                   <div className="w-24 h-full bg-white"></div>
                 </div>
                 </div>

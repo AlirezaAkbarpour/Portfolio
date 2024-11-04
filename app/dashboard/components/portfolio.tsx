@@ -21,7 +21,7 @@ export default function PortfolioMange() {
             </div>
            { show?<ProjectForm setShow={setShow}/>:null}
            <div className='w-full min-h-80
-            grid grid-cols-4 gap-24 py-4 justify-items-start mx-6 mt-16'>
+            grid grid-cols-4 gap-24 py-4 justify-items-start mt-16'>
                 <ProjectItem/>
                 <ProjectItem/>
                 <ProjectItem/>
