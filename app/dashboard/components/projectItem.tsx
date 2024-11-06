@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function ProjectItem() {
+export default function ProjectItem({getEdietedItem}:any) {
   return (
-    <section className="w-full h-80 bg-white rounded-xl">
-        <div className="w-full h-8 py-2 text-zinc-500 flex justify-end px-2">Edit</div>
+    <section className="w-full h-80 bg-white rounded-xl" >
+        <div className="w-full h-8 py-2 text-zinc-500 flex justify-end px-2 cursor-pointer" onClick={getEdietedItem}>Edit</div>
         <div className="w-full h-52 flex justify-center ">
         </div>
         <div className="w-full">

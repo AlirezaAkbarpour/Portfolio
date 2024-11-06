@@ -8,6 +8,10 @@ import ProjectItem from './projectItem'
 export default function PortfolioMange() {  
     const title = '</> Manage Project'
     const [show,setShow] = useState(false)
+    // Lets go edit item
+    const getEditedItem = (id:string)=>{
+      setShow(true)
+    }
     return (
     <div className="w-full px-10">
             <h1 className="text-3xl font-semibold text-white my-2 py-2">{title}</h1>
@@ -22,11 +26,11 @@ export default function PortfolioMange() {
            { show?<ProjectForm setShow={setShow}/>:null}
            <div className='w-full min-h-80
             grid grid-cols-4 gap-24 py-4 justify-items-start mt-16'>
-                <ProjectItem/>
-                <ProjectItem/>
-                <ProjectItem/>
-                <ProjectItem/>
-                <ProjectItem/>
+                <ProjectItem getEdietedItem={getEditedItem}/>
+                <ProjectItem getEdietedItem={getEditedItem}/>
+                <ProjectItem getEdietedItem={getEditedItem}/>
+                <ProjectItem getEdietedItem={getEditedItem}/>
+                <ProjectItem getEdietedItem={getEditedItem}/>
            </div>
     </div>
   )

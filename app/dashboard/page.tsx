@@ -3,9 +3,16 @@ import { Suspense, useLayoutEffect, useState } from "react"
 import PortfolioMange from "./components/portfolio"
 import Loading from "@/components/loading"
 
+enum Navigation {
+  portfolio = 'portfolio',
+  blogs = 'blogs',
+  works = 'works',
+  messages = 'messages'
+}
+
 export default function DashboardPage() {
   //navigation algorithm 
-  const [currentPath,setCurrentPath] = useState<string>("portfolio")
+  const [currentPath,setCurrentPath] = useState<string>(Navigation.portfolio)
 
   const clickHandler = (path:string)=>{
     setCurrentPath(path)
@@ -13,19 +20,19 @@ export default function DashboardPage() {
 
   const navbarAnimate = ()=>{
     switch(currentPath){
-      case "p_ortfolio": return 'w-1/4';
-      case "b_logs": return 'w-2/4';
-      case "w_orks": return 'w-3/4';
-      case "m_essages": return 'w-full'
+      case Navigation.portfolio: return 'w-1/4';
+      case Navigation.blogs: return 'w-2/4';
+      case Navigation.works: return 'w-3/4';
+      case Navigation.messages: return 'w-full'
     }
   }
 
   const ComponentSwitcher = ()=>{
     switch(currentPath){
-      case "p_ortfolio": return <Suspense fallback={<Loading/>} ><PortfolioMange/></Suspense> ;
-      case "b_logs": return null;
-      case "w_orks": return null;
-      case "m_essages": return <h1>Hello , Ali</h1>;
+      case Navigation.portfolio: return <Suspense fallback={<Loading/>} ><PortfolioMange/></Suspense> ;
+      case Navigation.blogs: return null;
+      case Navigation.works: return null;
+      case Navigation.messages: return <h1>Hello , Ali</h1>;
       default: return <PortfolioMange/>
     }
   }
@@ -44,12 +51,12 @@ export default function DashboardPage() {
                 <div>
                   <div className="flex justify-end text-white">
                   <div className="p-2 mx-4 font-medium cursor-pointer"
-                   onClick={()=>clickHandler("p_ortfolio")} >Portfolios</div>
-                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler("b_logs")}>Blogs</div>
-                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=> clickHandler("w_orks")}>Works</div>
-                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler("m_essages")}>Messages</div>    
+                   onClick={()=>clickHandler(Navigation.portfolio)} >Portfolios</div>
+                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler(Navigation.blogs)}>Blogs</div>
+                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=> clickHandler(Navigation.works)}>Works</div>
+                  <div className="p-2 mx-4 font-medium cursor-pointer" onClick={()=>clickHandler(Navigation.messages)}>Messages</div>    
                 </div>
-                <div className={ navbarAnimate() + " h-1 flex justify-end px-3 mx-2 transition-all delay-75"}>
+                <div className={ navbarAnimate() + " h-1 flex justify-end px-3 mx-2 transition-all delay-75 ease-in"}>
                   <div className="w-24 h-full bg-white"></div>
                 </div>
                 </div>
