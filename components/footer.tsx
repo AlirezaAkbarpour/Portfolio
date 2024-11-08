@@ -12,8 +12,11 @@ export default function Footer() {
 
     return (
       <footer className='z-50'>
-      <div className='footer w-full top-full h-[220px] bg-footer-color-black rounded-t-3xl flex mt-20'>
-      <div className='w-1/2 flex justify-start'>
+      <div className='footer w-full top-full h-[220px]
+       bg-footer-color-black rounded-t-3xl flex mt-20
+       max-md:min-w-min
+       '>
+      <div className='w-1/2 flex justify-start max-md:w-full'>
           <div className='w-1/3'>
               <div id="icon" className="w-64 h-16 p-2 mt-2 flex align-middle text-white 
                   font-black text-4xl
@@ -21,6 +24,7 @@ export default function Footer() {
                   mr-2
                   hover:animate-pulse
                   m-4
+                  max-md:text-2xl max-md:mr-4
                   "> 
                  A.K.A 
               <Circle/> 

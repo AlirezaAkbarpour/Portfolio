@@ -37,9 +37,10 @@ export default function RootLayout({
       </head>
       <body className='w-full max-w-screen-2xl 
       min-h-full bg-background-base 
-      container mx-auto
+      mx-auto
+      container
       lg:w-full
-      md:w-full
+      max-md:min-w-min
       '>
         <div id='not'></div>
         <Navbar/>
