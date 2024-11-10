@@ -1,9 +1,10 @@
 import dbConnect from "@/lib/db";
-//import { Portfolio } from "@/types/portfolios";
-import Portfolio from '@/models/portfolio';
+import Portfolio, { Portfolios } from '@/models/portfolio';
+import mongoose from "mongoose";
 
 export async function GET(req:Request) {
     await dbConnect;
+    console.log("db connected")
     try{
         const portfolios = await Portfolio.find({});
         return Response.json({success:true,data:portfolios},{status:200})
@@ -12,23 +13,14 @@ export async function GET(req:Request) {
     }
 };
 
-const data = { id:256245,
-    name:"Project One",
-    description:"Project code",
-    likes:25,
-    links:{
-        github:"https://github.com",
-        main_page:"page"
-    }}
-
 export async function POST(req:Request) {
-    await dbConnect;
+    mongoose.connect(`${process.env.MONGODB_URL}`)
+    console.log("db connected")
     try{
-        const newPortfolio = await Portfolio.create(
-            JSON.stringify(data)
-        );
-        return Response.json({success:true,data:newPortfolio},{status:201,headers:{"Content-Type":"application/json"}})
+        const {id,name,description,likes,links} : Portfolios = await req.json()
+        const newPortfolio = await Portfolio.create({id,name,description,likes,links});
+        return Response.json({success:true,newPortfolio},{status:201})
     }catch(error){
-        return Response.json({success:false},{status:400})
+        return Response.json({success:false,error},{status:400})
     }
 }
