@@ -20,6 +20,7 @@ export default function ProjectForm({setShow}:any) {
     getValues} 
     = useForm<TPortfolioSchema>()  
 
+
   const clickHandler = ()=>{
     setShow(false)
   }
@@ -41,7 +42,7 @@ export default function ProjectForm({setShow}:any) {
     console.log(JSON.stringify(data))
     await fetch("/api/portfolio",{
       method: "POST",
-      body: JSON.stringify(data),
+      body: JSON.stringify({...data,likes:25}),
       headers:{
         "Content-Type":"application/json"
       },
@@ -104,12 +105,12 @@ export default function ProjectForm({setShow}:any) {
                     <div className="flex mt-6 ml-4">
                       <label htmlFor="site" className="w-28 text-lg font-normal text-zinc-600">Demo Site:</label>
                       {/* link 0 */}
-                      <input  id="site" name="site" type="text" placeholder="https://simple.com" className="w-80 h-8 mx-4 font-normal rounded-md ring-1 p-1 ring-zinc-400 text-zinc-600"/>
+                      <input {...register('links.main_page',)} id="site" name="site" type="text" placeholder="https://simple.com" className="w-80 h-8 mx-4 font-normal rounded-md ring-1 p-1 ring-zinc-400 text-zinc-600"/>
                     </div>
                     <div className="flex mt-6 ml-4">
                       <label htmlFor="github" className="w-28 text-start text-lg font-normal text-zinc-600">Github Page:</label>
                       {/* link 1*/}
-                      <input  name="github" id="github" type="text" placeholder="https://simple.com" className="w-80 font-normal h-8 mx-4 rounded-md ring-1 p-1 ring-zinc-400 text-zinc-600"/>
+                      <input {...register('links.github')} name="github" id="github" type="text" placeholder="https://simple.com" className="w-80 font-normal h-8 mx-4 rounded-md ring-1 p-1 ring-zinc-400 text-zinc-600"/>
                     </div>
                     {children}
                     <div className="w-full flex justify-center mr-2">
