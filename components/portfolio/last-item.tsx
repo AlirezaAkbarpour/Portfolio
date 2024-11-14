@@ -2,20 +2,19 @@
 import {Divider } from "@mui/material"
 import {Star } from "@mui/icons-material"
 import Link from "next/link"
-import { useEffect, useState } from "react"
-import Loading from "../loading"
+import { useLayoutEffect, useState } from "react"
 import type { Portfolio } from "@/types/portfolios"
 
 export default function LastPortfolio() {
   const [portfolio,setPortfolio] = useState<Portfolio>()
   const [isLoading, setLoading] = useState(true)
 
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     const fetchData = async ()=>{
-      await fetch("https://portfolio-lemon-nu-98.vercel.app/api/portfolio",{cache:"no-store"})
+      await fetch("/api/portfolio",{cache:"no-cache"})
       .then((res)=> res.json())
-      .then((data)=>{ 
-        setPortfolio(data)
+      .then(async (data)=>{ 
+        await setPortfolio(data.data[0])
         setLoading(false)
       }
     )

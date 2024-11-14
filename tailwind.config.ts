@@ -27,6 +27,9 @@ const config: Config = {
       },
       width:{
         'p':"820px"
+      },
+      transitionDelay:{
+        '25':'25ms'
       }
     },
   },

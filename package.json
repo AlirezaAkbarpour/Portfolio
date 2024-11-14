@@ -20,9 +20,12 @@
     "next": "^14.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.53.2",
     "react-transition-group": "^4.4.5",
     "sharp": "^0.33.2",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "uuid": "^11.0.3",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",

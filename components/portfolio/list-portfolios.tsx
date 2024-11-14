@@ -1,8 +1,7 @@
 "use client"
-import {useEffect, useState } from "react";
+import {useLayoutEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { PortfolioList } from "@/app/api/portfolio/list/route";
-import Loading from "../loading";
 const ListItem = dynamic(()=> import('./list-item'),{ssr:false})
 
 export default function ListPortfolioComponent() {
@@ -10,18 +9,17 @@ export default function ListPortfolioComponent() {
   const [list,setList] = useState<PortfolioList>()
   const [isLoading,setLoading] = useState(true)
 
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     const fetchData = async ()=>{
-      await fetch("https://portfolio-lemon-nu-98.vercel.app/api/portfolio/list",{cache:'no-store'})
+      await fetch("/api/portfolio",{cache:'no-cache'})
       .then((res)=> res.json())
-      .then((data)=>{
-        setList(data.portfolios)
-        setLoading(false)
+      .then(async (data)=>{
+          await setList(data.data)
+          setLoading(false)
       })
     }
     fetchData() 
   },[])
- 
 
   return (
     <div className='w-full h-full bg-white py-8'>
