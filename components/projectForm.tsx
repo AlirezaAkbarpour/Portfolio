@@ -48,6 +48,7 @@ export default function ProjectForm({setShow}:any) {
       },
     })
     reset();
+    setShow(false)
   }
 
   if(!isClient) return null;

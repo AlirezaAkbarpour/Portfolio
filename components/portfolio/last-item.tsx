@@ -14,7 +14,7 @@ export default function LastPortfolio() {
       await fetch("/api/portfolio",{cache:"no-cache"})
       .then((res)=> res.json())
       .then(async (data)=>{ 
-        await setPortfolio(data.data[0])
+        await setPortfolio(data?.data[0])
         setLoading(false)
       }
     )

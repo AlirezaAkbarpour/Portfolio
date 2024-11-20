@@ -1,8 +1,9 @@
 "use client"
 import {useLayoutEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { PortfolioList } from "@/app/api/portfolio/list/route";
+import { Portfolio, PortfolioList } from "@/types/portfolios";
 const ListItem = dynamic(()=> import('./list-item'),{ssr:false})
+
 
 export default function ListPortfolioComponent() {
   
@@ -16,7 +17,7 @@ export default function ListPortfolioComponent() {
       .then(async (data)=>{
           await setList(data.data)
           setLoading(false)
-      })
+      }).catch((error)=> new Error(error))
     }
     fetchData() 
   },[])
@@ -24,14 +25,11 @@ export default function ListPortfolioComponent() {
   return (
     <div className='w-full h-full bg-white py-8'>
         <h1 className='w-full h-16 py-4 px-20 text-4xl font-semibold'>List Portfolios</h1>
-        <ul className='w-full px-20 mt-8'>
            {
               !isLoading? list &&
-             list.map((item,index) =>
-             <ListItem key={index} id={item.id} name={item.name} links={item.links}/>)
+             <ListItem list={list}/>
              : <><div className="text-xl text-black w-full text-center font-bold bg-yellow-400 py-4">No List to show!!</div></>
            }
-        </ul>
     </div>
   )
 }

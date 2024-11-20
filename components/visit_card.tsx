@@ -10,6 +10,11 @@ export default function VisitCard() {
   const container = useRef<HTMLDivElement>(null)
   const text = useRef<HTMLParagraphElement>(null)
   
+  useGSAP(()=>{
+    gsap.from(container.current,{marginTop:20,opacity:0,delay:.2})
+  })
+
+
   const clickHandle = ()=>{
       setLarge(large=>!large)
       if(large) gsap.to(toggle.current,{height:'26rem',duration:0.4,ease:'power2.in'})

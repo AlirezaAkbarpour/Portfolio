@@ -3,7 +3,7 @@ import Portfolio, { Portfolios } from '@/models/portfolio';
 
 export async function GET(req:Request) {
     await dbConnect;
-    //console.log("db connected")
+    console.log("db connected")
     try{
         const portfolios = await Portfolio.find({});
         return Response.json({success:true,data:portfolios},{status:200})
