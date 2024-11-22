@@ -3,6 +3,8 @@ import { useState } from 'react'
 import AddSVG from '../add_shape.svg'
 import ProjectForm from '@/components/projectForm'
 import ProjectItem from './projectItem'
+import { Button } from '@mui/material'
+import { Grid3x3Outlined, Grid4x4Rounded, Grid4x4TwoTone, ListAltOutlined } from '@mui/icons-material'
 
 
 export default function PortfolioMange() {  
@@ -13,7 +15,7 @@ export default function PortfolioMange() {
       setShow(true)
     }
     return (
-    <div className="w-full px-10">
+    <section className="w-full px-10">
             <h1 className="text-3xl font-semibold text-white my-2 py-2">{title}</h1>
             <div className='w-full bg-white h-14 my-6 flex justify-between items-center rounded-md'>
               <input className="w-full h-full rounded-md px-12
@@ -24,14 +26,17 @@ export default function PortfolioMange() {
               </div>
             </div>
            { show?<ProjectForm setShow={setShow}/>:null}
+           <div className='w-full h-14 mt-10 bg-fuchsia-300'>
+    
+           </div>
            <div className='w-full min-h-80
-            grid grid-cols-4 gap-24 py-4 justify-items-start mt-16'>
+            grid grid-cols-4 gap-24 py-4 justify-items-start mt-6'>
                 <ProjectItem getEdietedItem={getEditedItem}/>
                 <ProjectItem getEdietedItem={getEditedItem}/>
                 <ProjectItem getEdietedItem={getEditedItem}/>
                 <ProjectItem getEdietedItem={getEditedItem}/>
                 <ProjectItem getEdietedItem={getEditedItem}/>
            </div>
-    </div>
+    </section>
   )
 }
