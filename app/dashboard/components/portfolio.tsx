@@ -31,11 +31,11 @@ export default function PortfolioMange() {
            </div>
            <div className='w-full min-h-80
             grid grid-cols-4 gap-24 py-4 justify-items-start mt-6'>
-                <ProjectItem getEdietedItem={getEditedItem}/>
-                <ProjectItem getEdietedItem={getEditedItem}/>
-                <ProjectItem getEdietedItem={getEditedItem}/>
-                <ProjectItem getEdietedItem={getEditedItem}/>
-                <ProjectItem getEdietedItem={getEditedItem}/>
+                <ProjectItem getEditedItem={getEditedItem}/>
+                <ProjectItem getEditedItem={getEditedItem}/>
+                <ProjectItem getEditedItem={getEditedItem}/>
+                <ProjectItem getEditedItem={getEditedItem}/>
+                <ProjectItem getEditedItem={getEditedItem}/>
            </div>
     </section>
   )
