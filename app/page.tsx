@@ -90,7 +90,8 @@ export default function Home() {
   
             </div>
           </div>
-          <div className='w-full h-48 flex justify-between bg-white p-2' ref={itemBoxRef}>
+          <div className='w-full h-48 flex justify-between 
+          max-sm:h-[50rem] max-sm:items-center max-sm:w-[764px] max-sm:flex-col bg-white p-2' ref={itemBoxRef}>
             <div className='counter-box w-1/4 mt-2'> 
                   <div>
                     <Banner_cube/>

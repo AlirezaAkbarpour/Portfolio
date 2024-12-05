@@ -28,14 +28,14 @@ export default function Github_Ban() {
           rotateX:0,
           rotateY:0,
           ease:'power3.out',
-          duration:0.5
+          duration:1
         })
       })
   })
   return (
     <Link href={'https://github.com/AlirezaAkbarpour'} className='cart w-full h-full'>
     <div className='w-p h-80 bg-white shadow-2xl rounded-2xl mt-10 flex 
-      transition-all ease-in hover:bg-gray-600 hover:text-white hover:cursor-pointer delay-75'
+      transition-all ease-in hover:bg-gray-600 hover:text-white hover:cursor-pointer'
       ref={cart_ref}
       >
         <div className='w-1/2 mx-20 mt-20'>
