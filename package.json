@@ -18,7 +18,7 @@
     "gsap": "^3.12.5",
     "mongoose": "^8.6.3",
     "next": "^14.2.5",
-    "next-auth": "^4.24.10",
+    "next-auth": "^4.24.11",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.2",

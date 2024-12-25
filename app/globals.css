@@ -25,6 +25,9 @@
 input{
   border-color: white;
 }
+input:focus{
+  border: none;
+}
 
 
 body{

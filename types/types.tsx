@@ -11,4 +11,10 @@ export const PortfolioPost = z.object({
     })
 })
 
+export const AdminAccess = z.object({
+    username : z.string().min(1),
+    password: z.string()
+})
+
 export type TPortfolioSchema = z.infer<typeof PortfolioPost>
+export type TAdminAccess = z.infer<typeof AdminAccess>

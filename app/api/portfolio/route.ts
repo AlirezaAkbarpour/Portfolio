@@ -13,7 +13,7 @@ export async function GET(req:Request) {
 };
 
 export async function POST(req:Request) {
-    dbConnect()
+    await dbConnect()
     console.log("db connected")
     try{
         const {id,name,description,likes,links} : Portfolios = await req.json()
