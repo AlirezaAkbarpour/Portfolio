@@ -6,7 +6,7 @@ import ProjectItem from './projectItem'
 import { Grid3x3Outlined, Grid4x4Rounded, Grid4x4TwoTone, ListAltOutlined } from '@mui/icons-material'
 
 
-export default function PortfolioMange() {  
+export default function PortfolioManage() {  
     const title = '</> Manage Project'
     const [show,setShow] = useState(false)
     // Lets go edit item

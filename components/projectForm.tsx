@@ -7,7 +7,7 @@ import './styles/projectform.css'
 import NewLink from "./UI-kit/NewLink"
 import {useForm } from "react-hook-form"
 import { TPortfolioSchema } from "@/types/types"
-import { generateUUID } from "@/lib/uuid_generator"
+import {v4 as uuidv4} from 'uuid'
 
 export default function ProjectForm({setShow}:any) {
   const [isClient,setClient] = useState(false)
@@ -26,7 +26,7 @@ export default function ProjectForm({setShow}:any) {
   }
 
 
-  const uuid = generateUUID()
+  const uuid = uuidv4()
 
   const addLinkHandler = ()=>{
       const newChild = <NewLink label={"start"} key={children.length}/>

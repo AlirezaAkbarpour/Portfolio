@@ -1,8 +1,19 @@
 import mongoose from "mongoose";
+import { string } from "zod";
 
 export interface Portfolios extends mongoose.Document{
     id:number,name:string,description:string,likes:number,links:{github:string,main_page:string}
 }
+export interface AdminDocument extends mongoose.Document{
+    _id : string ; username: string ; password: string ; createdAt: Date ; updatedAt: Date
+}
+
+const AdminSchema = new mongoose.Schema<AdminDocument>({
+    username:{
+        type: String,
+        required:true
+    }
+})
 
 const PortfolioSchema = new mongoose.Schema<Portfolios>({
     id:{

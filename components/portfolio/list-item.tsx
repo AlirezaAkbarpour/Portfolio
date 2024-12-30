@@ -6,7 +6,7 @@ import { PortfolioList } from '@/types/portfolios'
 import { useEffect, useState } from 'react'
 
 
-export default function ListItemComponent({list}) {
+export default function ListItemComponent({list}:any) {
   const [listOfItems,setStateOfItems] = useState<PortfolioList>()
 
   useEffect(()=>{

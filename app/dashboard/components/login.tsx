@@ -1,31 +1,22 @@
-'use client'
+"use client"
 import { TAdminAccess } from "@/types/types"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import { useRouter } from "next/navigation"
+import { signIn , useSession } from "next-auth/react"
 
 export default function Login() {
   // get validation
-  const [islogin,setLogin] = useState(false)
+  const [islogin , setLogin] = useState(false)
   const [loginError, setLoginError] = useState(false)
-  const {register,
-  handleSubmit,
+  const {status} = useSession({required:true,onUnauthenticated(){
+    return <p>User Not Login</p>
+  }})
+  const {register, handleSubmit,
   formState:{errors,isSubmitting},
   reset,
   getValues} = useForm<TAdminAccess>()
-  const router = useRouter()
 
   const loginhandle = async (data:TAdminAccess)=>{
-      if(data.username=="alireza" && data.password == '1234'){
-          setLogin(true)
-          try{
-            router.push('/dashboard')
-            throw new Error("Something went wrong")
-          } catch(lb){ console.log(lb)}
-      } else{
-        setLogin(false)
-        setLoginError(true)
-      }
       reset();
   }
 
@@ -49,7 +40,7 @@ export default function Login() {
                   <div className="w-full my-28 ">
                        {!islogin && loginError && (<p className="w-full text-center text-base text-red-400 font-semibold my-2">username or password is incorrect!</p>)}
                     <div className="w-full flex justify-center">
-                      <button type="submit" disabled={isSubmitting} className="w-64 h-14 rounded-2xl bg-dashboard-orange text-white text-xl font-medium hover:scale-90 hover:bg-orange-700 transition-all">Login</button>
+                      <button type="submit" onClick={()=> signIn('google')} disabled={isSubmitting} className="w-64 h-14 rounded-2xl bg-dashboard-orange text-white text-xl font-medium hover:scale-90 hover:bg-orange-700 transition-all">Login</button>
                     </div>
                   </div>
               </form>

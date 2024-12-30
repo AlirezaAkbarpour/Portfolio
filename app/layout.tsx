@@ -6,6 +6,7 @@ import Footer from '../components/footer'
 import { Suspense } from 'react'
 import { lazy } from 'react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { getSession } from 'next-auth/react'
 
 const Loading = lazy(()=>import('@/components/loading'))
 const archivo = Archivo({ subsets: ['latin'] })
@@ -24,10 +25,8 @@ export const viewPort : Viewport = {
 
 
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+  children ,
+}: {children: React.ReactNode}) {
 
   return (
     <html lang="en" className={archivo.className}>
